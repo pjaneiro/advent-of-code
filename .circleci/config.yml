@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.12
+    environment:
+      TEST_RESULTS: /tmp/test-results
+    steps:
+      - checkout
+      - run: mkdir -p $TEST_RESULTS
+      - run:
+          name: Run tests for week 1
+          working_directory: week-1
+          command: go test -json > $TEST_RESULTS/week-1.json
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: raw-test-output
+workflows:
+  version: 2
+  build-workflow:
+    jobs:
+      - build
