@@ -9,9 +9,8 @@ jobs:
       - checkout
       - run: mkdir -p $TEST_RESULTS
       - run:
-          name: Run tests for week 1
-          working_directory: week-1
-          command: go test -json > $TEST_RESULTS/week-1.json
+          name: Run tests for day 1
+          command: go test reportrepair
       - store_artifacts:
           path: /tmp/test-results
           destination: raw-test-output
