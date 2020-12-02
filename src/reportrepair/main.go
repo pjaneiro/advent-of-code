@@ -73,20 +73,20 @@ func Run() {
 	path := "src/reportrepair/input.txt"
 	data, err := readLines(path)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Failed with error '%v'\n", err)
 	}
 
 	var result int
 	result, err = Challenge1(data)
 	if err != nil {
-		fmt.Printf("Error running challenge: %v\n", err)
+		fmt.Printf("Error running challenge 1: %v\n", err)
 	} else {
 		fmt.Printf("Challenge 1: %d\n", result)
 	}
 
 	result, err = Challenge2(data)
 	if err != nil {
-		fmt.Printf("Error running challenge: %v\n", err)
+		fmt.Printf("Error running challenge 2: %v\n", err)
 	} else {
 		fmt.Printf("Challenge 2: %d\n", result)
 	}
