@@ -5,6 +5,7 @@ jobs:
       - image: circleci/golang:1.12
     environment:
       TEST_RESULTS: /tmp/test-results
+      GOPATH: /home/circleci/project
     steps:
       - checkout
       - run: mkdir -p $TEST_RESULTS
