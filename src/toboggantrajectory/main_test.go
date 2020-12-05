@@ -1,6 +1,7 @@
 package toboggantrajectory_test
 
 import (
+	"fmt"
 	"testing"
 	. "toboggantrajectory"
 )
@@ -46,6 +47,25 @@ func TestChallenge1(t *testing.T) {
 	}
 }
 
+func ExampleChallenge1() {
+	var input []string = []string{
+		"..##.......",
+		"#...#...#..",
+		".#....#..#.",
+		"..#.#...#.#",
+		".#...##..#.",
+		"..#.##.....",
+		".#.#.#....#",
+		".#........#",
+		"#.##...#...",
+		"#...##....#",
+		".#..#...#.#",
+	}
+	result, err := Challenge1(input)
+	fmt.Printf("Result is %d, error is %v\n", result, err)
+	// Output: Result is 7, error is <nil>
+}
+
 func TestChallenge2(t *testing.T) {
 	var testCases = []struct {
 		name     string
@@ -85,4 +105,23 @@ func TestChallenge2(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleChallenge2() {
+	var input []string = []string{
+		"..##.......",
+		"#...#...#..",
+		".#....#..#.",
+		"..#.#...#.#",
+		".#...##..#.",
+		"..#.##.....",
+		".#.#.#....#",
+		".#........#",
+		"#.##...#...",
+		"#...##....#",
+		".#..#...#.#",
+	}
+	result, err := Challenge2(input)
+	fmt.Printf("Result is %d, error is %v\n", result, err)
+	// Output: Result is 336, error is <nil>
 }
