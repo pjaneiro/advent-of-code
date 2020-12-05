@@ -12,6 +12,15 @@ jobs:
       - run:
           name: Run tests for day 1
           command: go test reportrepair
+      - run:
+          name: Run tests for day 2
+          command: go test passwordphilosophy
+      - run:
+          name: Run tests for day 3
+          command: go test toboggantrajectory
+      - run:
+          name: Run tests for day 4
+          command: go test passportprocessing
       - store_artifacts:
           path: /tmp/test-results
           destination: raw-test-output
