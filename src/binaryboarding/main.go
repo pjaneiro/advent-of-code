@@ -23,56 +23,61 @@ func readLines(path string) ([]string, error) {
 }
 
 func Challenge1(data []string) (int, error) {
-	var result int = 0
+	result := 0
 	for _, seat := range data {
-		var rowdata string = seat[0:7]
-		var coldata string = seat[7:10]
-		var i, row, col int = 0, 0, 0
-		for i = 0; i < len(rowdata); i++ {
-			if rowdata[i:i+1] == "B" {
+		rowdata, coldata := seat[0:7], seat[7:10]
+		row, col := 0, 0
+		for i, char := range rowdata {
+			if char == 'B' {
 				row = row | 1<<(6-i)
 			}
 		}
-		for i = 0; i < len(coldata); i++ {
-			if coldata[i:i+1] == "R" {
+		for i, char := range coldata {
+			if char == 'R' {
 				col = col | 1<<(2-i)
 			}
 		}
-		if (row*8)+col > result {
-			result = (row * 8) + col
+		id := (row * 8) + col
+		if id < result {
+			continue
 		}
+		result = id
 	}
 	return result, nil
 }
 
 func Challenge2(data []string) (int, error) {
-	var plane [128][8]bool
-	var ids map[int]bool = make(map[int]bool)
+	ids := make(map[int]struct{})
 	for _, seat := range data {
-		var rowdata string = seat[0:7]
-		var coldata string = seat[7:10]
-		var i, row, col int = 0, 0, 0
-		for i = 0; i < len(rowdata); i++ {
-			if rowdata[i:i+1] == "B" {
+		rowdata, coldata := seat[0:7], seat[7:10]
+		row, col := 0, 0
+		for i, char := range rowdata {
+			if char == 'B' {
 				row = row | 1<<(6-i)
 			}
 		}
-		for i = 0; i < len(coldata); i++ {
-			if coldata[i:i+1] == "R" {
+		for i, char := range coldata {
+			if char == 'R' {
 				col = col | 1<<(2-i)
 			}
 		}
-		plane[row][col] = true
-		ids[(row*8)+col] = true
+		ids[(row*8)+col] = struct{}{}
 	}
 	for i := 0; i < 128; i++ {
 		for j := 0; j < 8; j++ {
-			if plane[i][j] == false {
-				id := (i * 8) + j
-				if ids[id+1] == true && ids[id-1] == true {
-					return id, nil
-				}
+			id := (i * 8) + j
+			if _, ok := ids[id]; ok {
+				continue
 			}
+			if _, ok := ids[id+1]; !ok {
+				continue
+			}
+
+			if _, ok := ids[id-1]; !ok {
+				continue
+			}
+
+			return id, nil
 		}
 	}
 	return 0, errors.New("couldn't find a satisfying solution")
