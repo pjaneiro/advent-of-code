@@ -1,6 +1,7 @@
 package main
 
 import (
+	"binaryboarding"
 	"passportprocessing"
 	"passwordphilosophy"
 	"reportrepair"
@@ -12,4 +13,5 @@ func main() {
 	passwordphilosophy.Run()
 	toboggantrajectory.Run()
 	passportprocessing.Run()
+	binaryboarding.Run()
 }
