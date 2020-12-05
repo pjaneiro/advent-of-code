@@ -21,6 +21,9 @@ jobs:
       - run:
           name: Run tests for day 4
           command: go test passportprocessing
+      - run:
+          name: Run tests for day 5
+          command: go test binaryboarding
 workflows:
   version: 2
   build-workflow:
