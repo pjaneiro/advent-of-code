@@ -1,3 +1,8 @@
+/*
+Package passwordphilosophy implements a solution to the second daily challenge of Advent of Code 2020.
+
+More detailed information can be found in: https://adventofcode.com/2020/day/2.
+*/
 package passwordphilosophy
 
 import (
@@ -10,6 +15,7 @@ import (
 	"strings"
 )
 
+// Password holds the info known about a password, including constraints.
 type Password struct {
 	Content string
 	Char    string
@@ -17,6 +23,7 @@ type Password struct {
 	Max     int
 }
 
+// readLines reads lines from input file to an array of Passwords.
 func readLines(path string) ([]Password, error) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -56,6 +63,11 @@ func readLines(path string) ([]Password, error) {
 	return lines, nil
 }
 
+/*
+Challenge1 runs the first challenge of the day.
+
+From a list of passwords, check how many comply to their defined constraints.
+*/
 func Challenge1(data []Password) (int, error) {
 	var result int = 0
 	for _, c := range data {
@@ -67,6 +79,11 @@ func Challenge1(data []Password) (int, error) {
 	return result, nil
 }
 
+/*
+Challenge2 runs the second challenge of the day.
+
+From a list of passwords, check how many comply to their defined constraints.
+*/
 func Challenge2(data []Password) (int, error) {
 	var result int = 0
 	for _, c := range data {
@@ -79,6 +96,7 @@ func Challenge2(data []Password) (int, error) {
 	return result, nil
 }
 
+// Run runs the daily challenge using the other methods.
 func Run() {
 	fmt.Println("Day 2")
 	path := "src/passwordphilosophy/input.txt"

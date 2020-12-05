@@ -67,7 +67,7 @@ func Challenge2(data []int) (int, error) {
 	return 0, errors.New("couldn't find a satisfying solution")
 }
 
-// Run runs the daily challenge using the other methods
+// Run runs the daily challenge using the other methods.
 func Run() {
 	fmt.Println("Day 1")
 	path := "src/reportrepair/input.txt"

@@ -1,3 +1,8 @@
+/*
+Package toboggantrajectory implements a solution to the third daily challenge of Advent of Code 2020.
+
+More detailed information can be found in: https://adventofcode.com/2020/day/3.
+*/
 package toboggantrajectory
 
 import (
@@ -7,6 +12,7 @@ import (
 	"os"
 )
 
+// readLines reads lines from input file to an array of strings.
 func readLines(path string) ([]string, error) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -22,6 +28,11 @@ func readLines(path string) ([]string, error) {
 	return lines, scanner.Err()
 }
 
+/*
+Challenge1 runs the first challenge of the day.
+
+Having an array of strings representing rows of trees, and following a specific slope, how many trees will you encounter?
+*/
 func Challenge1(data []string) (int, error) {
 	var result, i, j int = 0, 0, 0
 	var height, width int = len(data), len(data[0])
@@ -40,6 +51,11 @@ func Challenge1(data []string) (int, error) {
 	return 0, errors.New("something went wrong")
 }
 
+/*
+Challenge2 runs the second challenge of the day.
+
+Having an array of strings representing rows of trees, and following several different slopes, how many trees will you encounter?
+*/
 func Challenge2(data []string) (int, error) {
 	var result int = 1
 	var height, width int = len(data), len(data[0])
@@ -63,6 +79,7 @@ func Challenge2(data []string) (int, error) {
 	return result, nil
 }
 
+// Run runs the daily challenge using the other methods.
 func Run() {
 	fmt.Println("Day 3")
 	path := "src/toboggantrajectory/input.txt"

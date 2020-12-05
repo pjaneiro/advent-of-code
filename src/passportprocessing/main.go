@@ -1,3 +1,8 @@
+/*
+Package passportprocessing implements a solution to the fourth daily challenge of Advent of Code 2020.
+
+More detailed information can be found in: https://adventofcode.com/2020/day/4.
+*/
 package passportprocessing
 
 import (
@@ -9,6 +14,7 @@ import (
 	"strings"
 )
 
+// Passport holds the info about either a passport or a North Pole Credential.
 type Passport struct {
 	Byr string
 	Iyr string
@@ -20,6 +26,7 @@ type Passport struct {
 	Cid string
 }
 
+// readLines reads lines from input file to an array of Passports.
 func readLines(path string) ([]Passport, error) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -67,6 +74,11 @@ func readLines(path string) ([]Passport, error) {
 	return lines, scanner.Err()
 }
 
+/*
+Challenge1 runs the first challenge of the day.
+
+From a list of passports, check how many have all required fields.
+*/
 func Challenge1(data []Passport) (int, error) {
 	var result int = 0
 	for _, pass := range data {
@@ -77,6 +89,11 @@ func Challenge1(data []Passport) (int, error) {
 	return result, nil
 }
 
+/*
+Challenge2 runs the second challenge of the day.
+
+From a list of passports, check how many have all required fields and follow all field constraints.
+*/
 func Challenge2(data []Passport) (int, error) {
 	var result int = 0
 	for _, pass := range data {
@@ -154,6 +171,7 @@ func Challenge2(data []Passport) (int, error) {
 	return result, nil
 }
 
+// Run runs the daily challenge using the other methods.
 func Run() {
 	fmt.Println("Day 3")
 	path := "src/passportprocessing/input.txt"
