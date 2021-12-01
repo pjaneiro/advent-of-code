@@ -1,7 +1,7 @@
 package sonarsweep_test
 
 import (
-	. "sonarsweep"
+	. "github.com/pjaneiro/advent-of-code-2021/sonarsweep"
 	"testing"
 )
 

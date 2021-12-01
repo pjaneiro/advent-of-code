@@ -54,7 +54,7 @@ func Challenge2(data []int) (int, error) {
 
 func Run() {
 	fmt.Println("Day 1 - Sonar Sweep")
-	path := "src/sonarsweep/input.txt"
+	path := "sonarsweep/input.txt"
 	data, err := readLines(path)
 	if err != nil {
 		fmt.Printf("Failed with error '%v'\n", err)
