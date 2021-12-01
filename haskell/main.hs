@@ -1,4 +1,4 @@
-import SonarSweep.Main
+import SonarSweep.Challenges
 
 main = do
-  SonarSweep.Main.run
+  SonarSweep.Challenges.run
