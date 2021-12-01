@@ -15,8 +15,13 @@ module SonarSweep.Challenges where
   challenge1 :: [Int] -> Int
   challenge1 inputData = challenge1Loop inputData (length inputData - 1) 0
 
+  challenge2Loop :: [Int] -> Int -> Int -> Int
+  challenge2Loop inputData 0 count = count
+  challenge2Loop inputData index count = if (inputData!!index + inputData!!(index + 1) + inputData!!(index + 2)) > (inputData!!(index - 1) + inputData!!index + inputData!!(index + 1)) then challenge2Loop inputData (index - 1) (count + 1)
+    else challenge2Loop inputData (index - 1) (count)
+
   challenge2 :: [Int] -> Int
-  challenge2 _ = 0
+  challenge2 inputData = challenge2Loop inputData (length inputData - 3) 0
 
   run :: IO ()
   run = do
