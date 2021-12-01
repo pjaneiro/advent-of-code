@@ -2,6 +2,12 @@
 
 ## Running challenges
 
-From the root directory, run `docker run -it --rm -v $(pwd):/code -w=/code haskell:9 runhaskell main.hs`.
+From the root directory, run `runhaskell main.hs`.
 
-You can also run `make run`.
+You can also run `make run` (uses Docker).
+
+## Running tests
+
+From the root directory, run `runhaskell test.hs`.
+
+Requires `hspec`.
