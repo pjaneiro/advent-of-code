@@ -1,15 +1,5 @@
 # Advent of Code 2021
 
-## Running challenges
+This year, I'm trying to make the challenges in multiple languages.
 
-From the root directory, run `go run main.go`.
-
-## Running tests
-
-### Running all tests
-
-From the root directory, run `go test ./...`.
-
-### Running tests for a single sub-module
-
-From the root directory, run `go test ./<package name>`. For example, to run the tests for the challenges for the first day, run `go test ./sonarsweep`.
+So far, there are implementations in both [Go](golang) and [Haskell](haskell). Within each directory, you'll find a `README.md` file with the instructions to run the challenges in that language.
