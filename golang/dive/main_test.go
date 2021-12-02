@@ -1,21 +1,27 @@
-package sonarsweep_test
+package dive_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/sonarsweep"
+	. "github.com/pjaneiro/advent-of-code-2021/dive"
 	"testing"
 )
 
 func TestChallenge1(t *testing.T) {
 	var testCases = []struct {
 		name     string
-		input    []int
+		input    []Command
 		expected int
 		error    bool
 	}{
 		{
 			name:     "Example 1",
-			input:    []int{199, 200, 208, 210, 200, 207, 240, 269, 260, 263},
-			expected: 7,
+			input:    []Command{{Cmd: "forward", Val: 5}, {Cmd: "down", Val: 5}, {Cmd: "forward", Val: 8}, {Cmd: "up", Val: 3}, {Cmd: "down", Val: 8}, {Cmd: "forward", Val: 2}},
+			expected: 150,
+			error:    false,
+		},
+		{
+			name:     "Example 2",
+			input:    []Command{},
+			expected: 0,
 			error:    false,
 		},
 	}
@@ -37,14 +43,20 @@ func TestChallenge1(t *testing.T) {
 func TestChallenge2(t *testing.T) {
 	var testCases = []struct {
 		name     string
-		input    []int
+		input    []Command
 		expected int
 		error    bool
 	}{
 		{
 			name:     "Example 1",
-			input:    []int{199, 200, 208, 210, 200, 207, 240, 269, 260, 263},
-			expected: 5,
+			input:    []Command{{Cmd: "forward", Val: 5}, {Cmd: "down", Val: 5}, {Cmd: "forward", Val: 8}, {Cmd: "up", Val: 3}, {Cmd: "down", Val: 8}, {Cmd: "forward", Val: 2}},
+			expected: 900,
+			error:    false,
+		},
+		{
+			name:     "Example 2",
+			input:    []Command{},
+			expected: 0,
 			error:    false,
 		},
 	}
