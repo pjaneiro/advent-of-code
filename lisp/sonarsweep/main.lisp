@@ -1,0 +1,47 @@
+(defpackage :sonarsweep
+  (:use :cl)
+  (:export :run-sonar-sweep)
+)
+(in-package :sonarsweep)
+
+(defun get-file (filename)
+  (with-open-file (stream filename)
+    (loop for line = (read-line stream nil)
+      while line
+      collect (parse-integer line)
+    )
+  )
+)
+
+(defun challenge1 (inputData)
+  (setq count 0)
+  (setq index 1)
+  (loop
+    (if (> (nth index inputData) (nth (- index 1) inputData))
+      (setq count (+ count 1))
+    )
+    (setq index (+ index 1))
+    (if (>= index (length inputData)) (return count))
+  )
+)
+
+(defun challenge2 (inputData)
+  (setq count 0)
+  (setq index 1)
+  (loop
+    (setq minval (+ (+ (nth (- index 1) inputData) (nth index inputData)) (nth (+ index 1) inputData)))
+    (setq maxval (+ (+ (nth index inputData) (nth (+ index 1) inputData)) (nth (+ index 2) inputData)))
+    (if (> maxval minval)
+      (setq count (+ count 1))
+    )
+    (setq index (+ index 1))
+    (if (>= index (- (length inputData) 2)) (return count))
+  )
+)
+
+(defun run-sonar-sweep ()
+  (format t "Day 1 - Sonar Sweep~C" #\linefeed)
+  (setq fileData (get-file "sonarsweep/input.txt"))
+  (format t "Challenge 1: ~d~C" (challenge1 fileData) #\linefeed)
+  (format t "Challenge 2: ~d~C" (challenge2 fileData) #\linefeed)
+)
