@@ -107,7 +107,7 @@ func Challenge2(order []int, boards [][][]House) (int, error) {
 		curNumber := order[index]
 		for k, curBoard := range boards {
 			markHouseOnBoard(curBoard, curNumber)
-			if winningBoard(curBoard) && !statuses[k] {
+			if !statuses[k] && winningBoard(curBoard) {
 				statuses[k] = true
 				closed++
 			}
