@@ -20,8 +20,23 @@
       do (if (char= (char entry index) #\1) (setf (aref ones index) (+ (aref ones index) 1)))
     )
   )
-  ; (pprint ones)
   ones
+)
+
+(defun mostCommonAtIndex (data index)
+  (setq onesCount 0)
+  (dolist (entry data)
+    (if (char= (char entry index) #\1) (setq onesCount (+ onesCount 1)))
+  )
+  (if (>= onesCount (- (length data) onesCount)) #\1 #\0)
+)
+
+(defun subData (data target index)
+  (setq newData '())
+  (dolist (entry data)
+    (if (char= (char entry index) target) (setq newData (append newData (list entry))))
+  )
+  newData
 )
 
 (defun challenge1 (inputData)
@@ -37,7 +52,29 @@
 )
 
 (defun challenge2 (inputData)
-  0
+  (setq o2 0)
+  (setq co2 0)
+  (setq elemLength (length (nth 0 inputData)))
+  (setq o2data (copy-list inputData))
+  (setq co2data (copy-list inputData))
+  (block o2loop
+    (loop for index from 0 to (- elemLength 1)
+      do (if (/= o2 0) (return-from o2loop))
+      (setq mostCommono2 (mostCommonAtIndex o2data index))
+      (setq o2data (subData o2data mostCommono2 index))
+      (if (= (length o2data) 1) (setq o2 (parse-integer (nth 0 o2data) :radix 2)))
+    )
+  )
+  (block co2loop
+    (loop for index from 0 to (- elemLength 1)
+      do (if (/= co2 0) (return-from co2loop))
+      (setq mostCommonco2 (mostCommonAtIndex co2data index))
+      (setq leastCommonco2 (if (char= mostCommonco2 #\1) #\0 #\1))
+      (setq co2data (subData co2data leastCommonco2 index))
+      (if (= (length co2data) 1) (setq co2 (parse-integer (nth 0 co2data) :radix 2)))
+    )
+  )
+  (* o2 co2)
 )
 
 (defun run-binarydiagnostic ()
