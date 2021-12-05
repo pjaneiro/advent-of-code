@@ -26,7 +26,7 @@ module SonarSweep.Challenges where
   run :: IO ()
   run = do
     printf "Day 1 - Sonar Sweep\n"
-    let fileName = "SonarSweep/input_sonarsweep.txt"
+    let fileName = "SonarSweep/input.txt"
     inputData <- readInput fileName
 
     let challenge1Result = challenge1 inputData
