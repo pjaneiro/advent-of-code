@@ -51,7 +51,7 @@ module Dive.Challenges where
   run :: IO ()
   run = do
     printf "Day 2 - Dive!\n"
-    let fileName = "Dive/input_dive.txt"
+    let fileName = "Dive/input.txt"
     inputData <- readInput fileName
 
     let challenge1Result = challenge1 inputData
