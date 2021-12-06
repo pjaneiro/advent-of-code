@@ -74,8 +74,8 @@
 )
 
 (defun challenge1 (inputData)
-  (setq order (input-order inputData))
-  (setq boards (input-boards inputData))
+  (setq order (copy-list (input-order inputData)))
+  (setq boards (copy-list (input-boards inputData)))
   (setq score 0)
   (loop for index from 0 to (- (length order) 1)
     do (setq curNumber (nth index order))
@@ -95,6 +95,30 @@
 )
 
 (defun challenge2 (inputData)
+  (setq order (copy-list (input-order inputData)))
+  (setq boards (copy-list (input-boards inputData)))
+  (setq score 0)
+  (setq closed 0)
+  (setq statuses (make-list (length boards)))
+  (loop for index from 0 to (- (length order) 1)
+    do (setq curNumber (nth index order))
+    (loop for k from 0 to (- (length boards) 1)
+      do (setq curBoard (nth k boards))
+      (mark-house-on-board curBoard curNumber)
+      (if (and (not (nth k statuses)) (winning-board curBoard)) (progn
+        (setf (nth k statuses) t)
+        (setq closed (+ closed 1))
+      ))
+      (if (= closed (length boards)) (progn
+        (loop for i from 0 to 4
+          do (loop for j from 0 to 4
+            do (if (eql nil (house-marked (nth j (nth i curBoard)))) (setq score (+ score (house-number (nth j (nth i curBoard))))))
+          )
+        )
+        (return-from challenge2 (* score curNumber))
+      ))
+    )
+  )
   0
 )
 
