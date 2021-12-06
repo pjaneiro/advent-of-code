@@ -2,6 +2,7 @@
 (load "dive/main.lisp")
 (load "giantsquid/main.lisp")
 (load "hydrothermalventure/main.lisp")
+(load "lanternfish/main.lisp")
 (load "sonarsweep/main.lisp")
 (defpackage :main
   (:use :cl)
@@ -10,6 +11,7 @@
   (:import-from giantsquid :run-giantsquid)
   (:import-from hydrothermalventure :run-hydrothermalventure)
   (:import-from sonarsweep :run-sonar-sweep)
+  (:import-from lanternfish :run-lanternfish)
 )
 (in-package :main)
 
@@ -26,4 +28,6 @@
 (run-giantsquid)
 (newline)
 (run-hydrothermalventure)
+(newline)
+(run-lanternfish)
 (newline)
