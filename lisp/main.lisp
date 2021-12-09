@@ -18,7 +18,7 @@
 (in-package :main)
 
 (defun newlines ()
-  (format t "~C~C" #\linefeed #\linefeed)
+  (format t "~%~%")
 )
 
 (time (progn

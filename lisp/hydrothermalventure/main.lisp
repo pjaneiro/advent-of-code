@@ -144,8 +144,8 @@
 )
 
 (defun run-hydrothermalventure ()
-  (format t "Day 5 - Hydrothermal Venture~C" #\linefeed)
+  (format t "Day 5 - Hydrothermal Venture~%")
   (setq fileData (get-file "hydrothermalventure/input.txt"))
-  (format t "Challenge 1: ~d~C" (challenge1 fileData) #\linefeed)
-  (format t "Challenge 2: ~d~C" (challenge2 fileData) #\linefeed)
+  (format t "Challenge 1: ~d~%" (challenge1 fileData))
+  (format t "Challenge 2: ~d~%" (challenge2 fileData))
 )
