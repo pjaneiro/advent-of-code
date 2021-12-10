@@ -10,6 +10,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2021/sevensegmentsearch"
 	"github.com/pjaneiro/advent-of-code-2021/smokebasin"
 	"github.com/pjaneiro/advent-of-code-2021/sonarsweep"
+	"github.com/pjaneiro/advent-of-code-2021/syntaxscoring"
 	"github.com/pjaneiro/advent-of-code-2021/thetreacheryofwhales"
 	"time"
 )
@@ -52,6 +53,10 @@ func main() {
 
 	timer = time.Now()
 	smokebasin.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	syntaxscoring.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
