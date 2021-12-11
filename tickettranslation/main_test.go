@@ -51,18 +51,19 @@ func TestChallenge2(t *testing.T) {
 	}{
 		{
 			name:   "Example 1",
-			ticket: []int{11, 12, 13},
+			ticket: []int{7, 1, 14},
 			tickets: [][]int{
-				{3, 9, 18},
-				{15, 1, 5},
-				{5, 14, 9},
+				{7, 3, 47},
+				{40, 4, 50},
+				{55, 2, 20},
+				{38, 6, 12},
 			},
 			fields: []Field{
-				Field{Name: "class", Min1: 0, Max1: 1, Min2: 4, Max2: 19},
-				Field{Name: "row", Min1: 0, Max1: 5, Min2: 8, Max2: 19},
-				Field{Name: "seat", Min1: 0, Max1: 13, Min2: 16, Max2: 19},
+				Field{Name: "class", Min1: 1, Max1: 3, Min2: 5, Max2: 7},
+				Field{Name: "row", Min1: 6, Max1: 11, Min2: 33, Max2: 44},
+				Field{Name: "seat", Min1: 13, Max1: 40, Min2: 45, Max2: 50},
 			},
-			expected: 0,
+			expected: 1,
 		},
 	}
 
