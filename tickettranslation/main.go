@@ -138,7 +138,7 @@ func Challenge2(data [][]int, myticket []int, fields []Field) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 16")
+	fmt.Println("Day 16 - Ticket Translation")
 	path := "tickettranslation/input.txt"
 	data, err := readLines(path)
 	if err != nil {

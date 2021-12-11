@@ -199,7 +199,7 @@ func Challenge2(input [][]rune) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 11")
+	fmt.Println("Day 11 - Seating System")
 	path := "seatingsystem/input.txt"
 	data, err := readLines(path)
 	if err != nil {

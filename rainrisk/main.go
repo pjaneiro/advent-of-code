@@ -145,7 +145,7 @@ func Challenge2(data []Instruction) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 12")
+	fmt.Println("Day 12 - Rain Risk")
 	path := "rainrisk/input.txt"
 	data, err := readLines(path)
 	if err != nil {

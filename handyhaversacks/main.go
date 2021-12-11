@@ -89,7 +89,7 @@ func Challenge2(data map[string]map[string]int) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 7")
+	fmt.Println("Day 7 - Handy Haversacks")
 	path := "handyhaversacks/input.txt"
 	data, err := readLines(path)
 	if err != nil {

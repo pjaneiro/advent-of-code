@@ -101,7 +101,7 @@ func Challenge2(data []string) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 5")
+	fmt.Println("Day 5 - Binary Boarding")
 	path := "binaryboarding/input.txt"
 	data, err := readLines(path)
 	if err != nil {

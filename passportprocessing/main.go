@@ -173,7 +173,7 @@ func Challenge2(data []Passport) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 4")
+	fmt.Println("Day 4 - Passport Processing")
 	path := "passportprocessing/input.txt"
 	data, err := readLines(path)
 	if err != nil {

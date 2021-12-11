@@ -150,7 +150,7 @@ func Challenge2(data []Operation) (int64, error) {
 }
 
 func Run() {
-	fmt.Println("Day 14")
+	fmt.Println("Day 14 - Docking Data")
 	path := "dockingdata/input.txt"
 	data, err := readLines(path)
 	if err != nil {

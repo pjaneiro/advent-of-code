@@ -65,7 +65,7 @@ func Challenge2(data []int) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 15")
+	fmt.Println("Day 15 - Rambunctious Recitation")
 	data := []int{0, 1, 5, 10, 3, 12, 19}
 
 	var result int

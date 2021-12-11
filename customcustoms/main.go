@@ -82,7 +82,7 @@ func Challenge2(data []Form) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 6")
+	fmt.Println("Day 6 - Custom Customs")
 	path := "customcustoms/input.txt"
 	data, err := readLines(path)
 	if err != nil {

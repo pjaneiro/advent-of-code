@@ -129,7 +129,7 @@ func Challenge2(data []string) (int64, error) {
 }*/
 
 func Run() {
-	fmt.Println("Day 13")
+	fmt.Println("Day 13 - Shuttle Search")
 	path := "shuttlesearch/input.txt"
 	goal, ids, err := readLines(path)
 	if err != nil {

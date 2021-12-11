@@ -98,7 +98,7 @@ func Challenge2(data []Password) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 2")
+	fmt.Println("Day 2 - Password Philosophy")
 	path := "passwordphilosophy/input.txt"
 	data, err := readLines(path)
 	if err != nil {

@@ -135,7 +135,7 @@ func Challenge2(data [][][][]rune) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 17")
+	fmt.Println("Day 17 - Conway Cubes")
 
 	data := [][][][]rune{
 		{

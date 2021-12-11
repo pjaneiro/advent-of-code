@@ -70,7 +70,7 @@ func Challenge2(data []int) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 10")
+	fmt.Println("Day 10 - Adapter Array")
 	path := "adapterarray/input.txt"
 	data, err := readLines(path)
 	if err != nil {

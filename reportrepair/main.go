@@ -69,7 +69,7 @@ func Challenge2(data []int) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 1")
+	fmt.Println("Day 1 - Report Repair")
 	path := "reportrepair/input.txt"
 	data, err := readLines(path)
 	if err != nil {

@@ -112,7 +112,7 @@ func Challenge2(data []Command) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 8")
+	fmt.Println("Day 8 - Handheld Halting")
 	path := "handheldhalting/input.txt"
 	data, err := readLines(path)
 	if err != nil {

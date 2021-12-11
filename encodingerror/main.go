@@ -76,7 +76,7 @@ func Challenge2(data []int, preamble int) (int, error) {
 }
 
 func Run() {
-	fmt.Println("Day 9")
+	fmt.Println("Day 9 - Encoding Error")
 	path := "encodingerror/input.txt"
 	data, err := readLines(path)
 	if err != nil {

@@ -81,7 +81,7 @@ func Challenge2(data []string) (int, error) {
 
 // Run runs the daily challenge using the other methods.
 func Run() {
-	fmt.Println("Day 3")
+	fmt.Println("Day 3 - Toboggan Trajectory")
 	path := "toboggantrajectory/input.txt"
 	data, err := readLines(path)
 	if err != nil {
