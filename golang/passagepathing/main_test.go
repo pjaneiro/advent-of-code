@@ -14,7 +14,7 @@ func TestChallenge1(t *testing.T) {
 	}{
 		{
 			name:     "Example 1",
-			input:    []string{"start-A",  "start-b",  "A-c",  "A-b",  "b-d",  "A-end",  "b-end"},
+			input:    []string{"start-A", "start-b", "A-c", "A-b", "b-d", "A-end", "b-end"},
 			expected: 10,
 			error:    false,
 		}, {
@@ -53,7 +53,7 @@ func TestChallenge2(t *testing.T) {
 	}{
 		{
 			name:     "Example 1",
-			input:    []string{"start-A",  "start-b",  "A-c",  "A-b",  "b-d",  "A-end",  "b-end"},
+			input:    []string{"start-A", "start-b", "A-c", "A-b", "b-d", "A-end", "b-end"},
 			expected: 36,
 			error:    false,
 		}, {

@@ -103,22 +103,22 @@ func markPoints(board [][]int, fromX int, fromY int, toX int, toY int) {
 		steps := toX - fromX
 		if fromY < toY {
 			for i := 0; i <= steps; i++ {
-				board[fromX + i][fromY + i]++
+				board[fromX+i][fromY+i]++
 			}
 		} else {
 			for i := 0; i <= steps; i++ {
-				board[fromX + i][fromY - i]++
+				board[fromX+i][fromY-i]++
 			}
 		}
 	} else {
 		steps := fromX - toX
 		if fromY < toY {
 			for i := 0; i <= steps; i++ {
-				board[fromX - i][fromY + i]++
+				board[fromX-i][fromY+i]++
 			}
 		} else {
 			for i := 0; i <= steps; i++ {
-				board[fromX - i][fromY - i]++
+				board[fromX-i][fromY-i]++
 			}
 		}
 	}

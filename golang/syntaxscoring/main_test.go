@@ -62,4 +62,3 @@ func TestChallenge2(t *testing.T) {
 		})
 	}
 }
-

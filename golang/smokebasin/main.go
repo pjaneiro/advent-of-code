@@ -39,7 +39,7 @@ func readLines(path string) ([][]int, error) {
 	return matrix, nil
 }
 
-func findLowPoints(data [][]int) ([]Point) {
+func findLowPoints(data [][]int) []Point {
 	var locations []Point
 	// All but edges and corners
 	var val int
@@ -94,29 +94,29 @@ func findLowPoints(data [][]int) ([]Point) {
 	return locations
 }
 
-func basinSize(data [][]int, visited map[Point]bool, x int, y int) (int) {
+func basinSize(data [][]int, visited map[Point]bool, x int, y int) int {
 	if x < 0 || y < 0 || x >= len(data) || y >= len(data[0]) || data[x][y] == 9 {
 		return 0
 	} else {
 		val := data[x][y]
 		var up, down, left, right int
 		if x > 0 && data[x-1][y] > val {
-			if _, ok := visited[Point{X: x-1, Y: y}]; !ok {
+			if _, ok := visited[Point{X: x - 1, Y: y}]; !ok {
 				up = basinSize(data, visited, x-1, y)
 			}
 		}
-		if x < len(data) - 1 && data[x+1][y] > val {
-			if _, ok := visited[Point{X: x+1, Y: y}]; !ok {
+		if x < len(data)-1 && data[x+1][y] > val {
+			if _, ok := visited[Point{X: x + 1, Y: y}]; !ok {
 				down = basinSize(data, visited, x+1, y)
 			}
 		}
 		if y > 0 && data[x][y-1] > val {
-			if _, ok := visited[Point{X: x, Y: y-1}]; !ok {
+			if _, ok := visited[Point{X: x, Y: y - 1}]; !ok {
 				left = basinSize(data, visited, x, y-1)
 			}
 		}
-		if y < len(data[0]) -1 && data[x][y+1] > val {
-			if _, ok := visited[Point{X: x, Y: y+1}]; !ok {
+		if y < len(data[0])-1 && data[x][y+1] > val {
+			if _, ok := visited[Point{X: x, Y: y + 1}]; !ok {
 				right = basinSize(data, visited, x, y+1)
 			}
 		}
@@ -143,7 +143,7 @@ func Challenge2(data [][]int) (int, error) {
 		sizes = append(sizes, curSize)
 	}
 	sort.Ints(sizes)
-	return (sizes[len(sizes) - 3] * sizes[len(sizes) - 2] * sizes[len(sizes) - 1]), nil
+	return (sizes[len(sizes)-3] * sizes[len(sizes)-2] * sizes[len(sizes)-1]), nil
 }
 
 func Run() {

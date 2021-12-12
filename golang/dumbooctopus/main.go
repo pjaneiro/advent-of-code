@@ -50,7 +50,7 @@ func flash(data [][]int, flashes map[Point]bool, x int, y int) {
 			if dx == 0 && dy == 0 {
 				continue
 			}
-			newX, newY := x + dx, y + dy
+			newX, newY := x+dx, y+dy
 			if newX >= 0 && newX < len(data) && newY >= 0 && newY < len(data) {
 				data[newX][newY]++
 				if data[newX][newY] == 10 {
@@ -65,16 +65,16 @@ func Challenge1(data [][]int) (int, error) {
 	count := 0
 	for step := 0; step < 100; step++ {
 		flashes := make(map[Point]bool)
-		for i, _ := range(data) {
-			for j, _ := range(data[i]) {
+		for i, _ := range data {
+			for j, _ := range data[i] {
 				data[i][j]++
 				if data[i][j] > 9 {
 					flash(data, flashes, i, j)
 				}
 			}
 		}
-		for i, _ := range(data) {
-			for j, _ := range(data[i]) {
+		for i, _ := range data {
+			for j, _ := range data[i] {
 				if data[i][j] > 9 {
 					count++
 					data[i][j] = 0
@@ -88,23 +88,23 @@ func Challenge1(data [][]int) (int, error) {
 func Challenge2(data [][]int) (int, error) {
 	for step := 0; true; step++ {
 		flashes := make(map[Point]bool)
-		for i, _ := range(data) {
-			for j, _ := range(data[i]) {
+		for i, _ := range data {
+			for j, _ := range data[i] {
 				data[i][j]++
 				if data[i][j] > 9 {
 					flash(data, flashes, i, j)
 				}
 			}
 		}
-		for i, _ := range(data) {
-			for j, _ := range(data[i]) {
+		for i, _ := range data {
+			for j, _ := range data[i] {
 				if data[i][j] > 9 {
 					data[i][j] = 0
 				}
 			}
 		}
-		if len(flashes) == len(data) * len(data[0]) {
-			return step+1, nil
+		if len(flashes) == len(data)*len(data[0]) {
+			return step + 1, nil
 		}
 	}
 	return 0, errors.New("something went wrong")

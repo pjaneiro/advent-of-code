@@ -22,7 +22,7 @@ func readLines(path string) ([]string, error) {
 	return lines, nil
 }
 
-func makeMapping(data []string) (map[string][]string) {
+func makeMapping(data []string) map[string][]string {
 	var mapping map[string][]string = make(map[string][]string)
 
 	for _, cur := range data {
@@ -42,7 +42,7 @@ func makeMapping(data []string) (map[string][]string) {
 	return mapping
 }
 
-func isLowercase(input string) (bool) {
+func isLowercase(input string) bool {
 	if input == "start" || input == "end" {
 		return false
 	}
@@ -54,34 +54,34 @@ func isLowercase(input string) (bool) {
 	return true
 }
 
-func traversePart1(path []string, score int, mapping map[string][]string) (int) {
-	lastLocation := path[len(path) - 1]
+func traversePart1(path []string, score int, mapping map[string][]string) int {
+	lastLocation := path[len(path)-1]
 	if lastLocation == "end" {
 		return 1
 	} else if lastLocation == "start" && len(path) != 1 {
 		return 0
 	} else if isLowercase(lastLocation) {
-		for _, cur := range(path[1:len(path)-1]) {
+		for _, cur := range path[1 : len(path)-1] {
 			if cur == lastLocation {
 				return 0
 			}
 		}
 	}
 	result := 0
-	for _, cur := range(mapping[lastLocation]) {
+	for _, cur := range mapping[lastLocation] {
 		result = result + traversePart1(append(path, cur), score, mapping)
 	}
 	return result
 }
 
-func traversePart2(path []string, score int, mapping map[string][]string, rule bool) (int) {
-	lastLocation := path[len(path) - 1]
+func traversePart2(path []string, score int, mapping map[string][]string, rule bool) int {
+	lastLocation := path[len(path)-1]
 	if lastLocation == "end" {
 		return 1
 	} else if lastLocation == "start" && len(path) != 1 {
 		return 0
 	} else if isLowercase(lastLocation) {
-		for _, cur := range(path[1:len(path)-1]) {
+		for _, cur := range path[1 : len(path)-1] {
 			if cur == lastLocation {
 				if rule {
 					return 0
@@ -92,7 +92,7 @@ func traversePart2(path []string, score int, mapping map[string][]string, rule b
 		}
 	}
 	result := 0
-	for _, cur := range(mapping[lastLocation]) {
+	for _, cur := range mapping[lastLocation] {
 		result = result + traversePart2(append(path, cur), score, mapping, rule)
 	}
 	return result

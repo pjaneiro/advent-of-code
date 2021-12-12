@@ -19,7 +19,7 @@ func readLines(path string) ([]int, error) {
 	scanner := bufio.NewScanner(file)
 	scanner.Scan()
 	line := strings.Split(scanner.Text(), ",")
-	for _, cur := range(line) {
+	for _, cur := range line {
 		elem, err := strconv.Atoi(cur)
 		if err != nil {
 			return data, err
@@ -46,7 +46,7 @@ func Challenge1(data []int) (int64, error) {
 
 func Challenge2(data []int) (int64, error) {
 	buckets := make([]int64, 9)
-	for _, cur := range(data) {
+	for _, cur := range data {
 		buckets[cur]++
 	}
 	for generation := 0; generation < 256; generation++ {
@@ -57,13 +57,13 @@ func Challenge2(data []int) (int64, error) {
 				newBuckets[6] = newBuckets[6] + count
 				newBuckets[8] = newBuckets[8] + count
 			} else {
-				newBuckets[i - 1] = newBuckets[i - 1] + count
+				newBuckets[i-1] = newBuckets[i-1] + count
 			}
 		}
 		copy(buckets, newBuckets)
 	}
 	var total int64
-	for _, cur := range(buckets) {
+	for _, cur := range buckets {
 		total = total + cur
 	}
 	return total, nil

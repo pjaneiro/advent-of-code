@@ -29,20 +29,20 @@ func Challenge1(data []string) (int, error) {
 		for _, curChar := range curLine {
 			if curChar == '(' || curChar == '[' || curChar == '{' || curChar == '<' {
 				pile = append(pile, curChar)
-			} else if curChar == ')' && pile[len(pile) - 1] != '(' {
+			} else if curChar == ')' && pile[len(pile)-1] != '(' {
 				score = score + 3
 				break
-			} else if curChar == ']' && pile[len(pile) - 1] != '[' {
+			} else if curChar == ']' && pile[len(pile)-1] != '[' {
 				score = score + 57
 				break
-			} else if curChar == '}' && pile[len(pile) - 1] != '{' {
+			} else if curChar == '}' && pile[len(pile)-1] != '{' {
 				score = score + 1197
 				break
-			} else if curChar == '>' && pile[len(pile) - 1] != '<' {
+			} else if curChar == '>' && pile[len(pile)-1] != '<' {
 				score = score + 25137
 				break
 			} else {
-				pile = pile[:len(pile) - 1]
+				pile = pile[:len(pile)-1]
 			}
 		}
 	}
@@ -51,23 +51,23 @@ func Challenge1(data []string) (int, error) {
 
 func Challenge2(data []string) (int, error) {
 	var scores []int
-	outerLoop:
+outerLoop:
 	for _, curLine := range data {
 		curScore := 0
 		var pile []rune
 		for _, curChar := range curLine {
 			if curChar == '(' || curChar == '[' || curChar == '{' || curChar == '<' {
 				pile = append(pile, curChar)
-			} else if curChar == ')' && pile[len(pile) - 1] != '(' {
+			} else if curChar == ')' && pile[len(pile)-1] != '(' {
 				continue outerLoop
-			} else if curChar == ']' && pile[len(pile) - 1] != '[' {
+			} else if curChar == ']' && pile[len(pile)-1] != '[' {
 				continue outerLoop
-			} else if curChar == '}' && pile[len(pile) - 1] != '{' {
+			} else if curChar == '}' && pile[len(pile)-1] != '{' {
 				continue outerLoop
-			} else if curChar == '>' && pile[len(pile) - 1] != '<' {
+			} else if curChar == '>' && pile[len(pile)-1] != '<' {
 				continue outerLoop
 			} else {
-				pile = pile[:len(pile) - 1]
+				pile = pile[:len(pile)-1]
 			}
 		}
 		for i := len(pile) - 1; i >= 0; i-- {
