@@ -10,6 +10,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2020/encodingerror"
 	"github.com/pjaneiro/advent-of-code-2020/handheldhalting"
 	"github.com/pjaneiro/advent-of-code-2020/handyhaversacks"
+	"github.com/pjaneiro/advent-of-code-2020/monstermessages"
 	"github.com/pjaneiro/advent-of-code-2020/operationorder"
 	"github.com/pjaneiro/advent-of-code-2020/passportprocessing"
 	"github.com/pjaneiro/advent-of-code-2020/passwordphilosophy"
@@ -98,5 +99,10 @@ func main() {
 	timer = time.Now()
 	operationorder.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	monstermessages.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
 }
