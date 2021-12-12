@@ -4,8 +4,10 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
+	"github.com/gbin/goncurses"
 	"os"
 	"strconv"
+	"time"
 )
 
 type Point struct {
@@ -86,6 +88,17 @@ func Challenge1(data [][]int) (int, error) {
 }
 
 func Challenge2(data [][]int) (int, error) {
+	src, err := goncurses.Init()
+	if err != nil {
+		return 0, err
+	}
+	defer goncurses.End()
+
+	goncurses.Raw(true)
+	goncurses.Echo(false)
+	goncurses.Cursor(0)
+	src.Keypad(true)
+
 	for step := 0; true; step++ {
 		flashes := make(map[Point]bool)
 		for i, _ := range(data) {
@@ -103,7 +116,26 @@ func Challenge2(data [][]int) (int, error) {
 				}
 			}
 		}
+
+		src.MovePrintf(1, 1, "After step %d\n", step+1)
+		for i, _ := range(data) {
+			for j, _ := range(data[i]) {
+				if data[i][j] == 0 {
+					src.AttrOn(goncurses.A_BOLD)
+					src.MovePrintf(i + 3, 1 + j * 2, "%d", data[i][j])
+					src.AttrOff(goncurses.A_BOLD)
+				} else {
+					src.AttrOn(goncurses.A_DIM)
+					src.MovePrintf(i + 3, 1 + j * 2, "%d", data[i][j])
+					src.AttrOff(goncurses.A_DIM)
+				}
+			}
+		}
+		src.Refresh()
+		time.Sleep(180 * time.Millisecond)
+
 		if len(flashes) == len(data) * len(data[0]) {
+			time.Sleep(3 * time.Second)
 			return step+1, nil
 		}
 	}
@@ -128,9 +160,9 @@ func Run() {
 	}
 	result, err = Challenge1(cpy)
 	if err != nil {
-		fmt.Printf("Error running challenge 1: %v\n", err)
+		// fmt.Printf("Error running challenge 1: %v\n", err)
 	} else {
-		fmt.Printf("Challenge 1: %d\n", result)
+		// fmt.Printf("Challenge 1: %d\n", result)
 	}
 
 	cpy = make([][]int, len(data))
