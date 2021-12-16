@@ -5,6 +5,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2020/adapterarray"
 	"github.com/pjaneiro/advent-of-code-2020/allergenassessment"
 	"github.com/pjaneiro/advent-of-code-2020/binaryboarding"
+	"github.com/pjaneiro/advent-of-code-2020/combobreaker"
 	"github.com/pjaneiro/advent-of-code-2020/conwaycubes"
 	"github.com/pjaneiro/advent-of-code-2020/crabcombat"
 	"github.com/pjaneiro/advent-of-code-2020/crabcups"
@@ -127,6 +128,10 @@ func main() {
 
 	timer = time.Now()
 	lobbylayout.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	combobreaker.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
