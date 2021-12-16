@@ -5,6 +5,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2019/a1202programalarm"
 	"github.com/pjaneiro/advent-of-code-2019/crossedwires"
 	"github.com/pjaneiro/advent-of-code-2019/securecontainer"
+	"github.com/pjaneiro/advent-of-code-2019/sunnywithachanceofasteroids"
 	"github.com/pjaneiro/advent-of-code-2019/thetyrannyoftherocketequation"
 	"time"
 )
@@ -27,6 +28,10 @@ func main() {
 
 	timer = time.Now()
 	securecontainer.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	sunnywithachanceofasteroids.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
