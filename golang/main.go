@@ -10,6 +10,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2021/giantsquid"
 	"github.com/pjaneiro/advent-of-code-2021/hydrothermalventure"
 	"github.com/pjaneiro/advent-of-code-2021/lanternfish"
+	"github.com/pjaneiro/advent-of-code-2021/packetdecoder"
 	"github.com/pjaneiro/advent-of-code-2021/passagepathing"
 	"github.com/pjaneiro/advent-of-code-2021/sevensegmentsearch"
 	"github.com/pjaneiro/advent-of-code-2021/smokebasin"
@@ -82,6 +83,10 @@ func main() {
 
 	timer = time.Now()
 	chiton.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	packetdecoder.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
