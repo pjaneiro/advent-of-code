@@ -47,36 +47,71 @@ func readLines(path string) ([]Recipe, error) {
 	return result, nil
 }
 
-func Challenge1(data []Recipe) (int, error) {
-	var mapping map[string]map[string]int = make(map[string]map[string]int)
+func contains(list []string, val string) bool {
+	for _, cur := range list {
+		if cur == val {
+			return true
+		}
+	}
+	return false
+}
+
+func intersection(s1 []string, s2 []string) []string {
+	var result []string = make([]string, 0)
+	for _, cur := range s1 {
+		if contains(s2, cur) {
+			result = append(result, cur)
+		}
+	}
+	return result
+}
+
+func remove(list []string, val string) []string {
+	var result []string = make([]string, 0)
+	for _, cur := range list {
+		if cur != val {
+			result = append(result, cur)
+		}
+	}
+	return result
+}
+
+func solve(data []Recipe) map[string]string {
+	var mapping map[string][]string = make(map[string][]string)
 	var assigns map[string]string = make(map[string]string)
 
 	for _, cur := range data {
 		for _, alg := range cur.Allergens {
 			if _, ok := mapping[alg]; !ok {
-				mapping[alg] = make(map[string]int)
-			}
-			for _, ing := range cur.Ingredients {
-				mapping[alg][ing]++
+				mapping[alg] = make([]string, len(cur.Ingredients))
+				copy(mapping[alg], cur.Ingredients)
+			} else {
+				mapping[alg] = intersection(mapping[alg], cur.Ingredients)
 			}
 		}
 	}
-	for kAlg, vAlg := range mapping {
-		max := 0
-		best := ""
-		for kIng, vIng := range vAlg {
-			if vIng > max {
-				if _, ok := assigns[kIng]; !ok {
-					max = vIng
-					best = kIng
+	for len(mapping) > 0 {
+		for alg, ing := range mapping {
+			if len(ing) == 1 {
+				assigns[ing[0]] = alg
+
+				for k, v := range mapping {
+					mapping[k] = remove(v, ing[0])
 				}
+
+				delete(mapping, alg)
+				break
 			}
 		}
-		assigns[best] = kAlg
 	}
+	return assigns
+}
+
+func Challenge1(data []Recipe) (int, error) {
+	assigns := solve(data)
 	count := 0
-	for _, cur := range data {
-		for _, ing := range cur.Ingredients {
+	for _, v := range data {
+		for _, ing := range v.Ingredients {
 			if _, ok := assigns[ing]; !ok {
 				count++
 			}
@@ -86,45 +121,20 @@ func Challenge1(data []Recipe) (int, error) {
 }
 
 func Challenge2(data []Recipe) (string, error) {
-	var mapping map[string]map[string]int = make(map[string]map[string]int)
-	var assigns map[string]string = make(map[string]string)
-	var reverseAssigns map[string]string = make(map[string]string)
+	assigns := solve(data)
+	var reverse map[string]string = make(map[string]string)
+	var ingredients []string = make([]string, 0)
+	var result []string = make([]string, 0)
 
-	for _, cur := range data {
-		for _, alg := range cur.Allergens {
-			if _, ok := mapping[alg]; !ok {
-				mapping[alg] = make(map[string]int)
-			}
-			for _, ing := range cur.Ingredients {
-				mapping[alg][ing]++
-			}
-		}
+	for alg, ing := range assigns {
+		reverse[ing] = alg
+		ingredients = append(ingredients, ing)
 	}
-	for kAlg, vAlg := range mapping {
-		max := 0
-		best := ""
-		for kIng, vIng := range vAlg {
-			if vIng > max {
-				if _, ok := assigns[kIng]; !ok {
-					max = vIng
-					best = kIng
-				}
-			}
-		}
-		assigns[best] = kAlg
-		reverseAssigns[kAlg] = best
+	sort.Strings(ingredients)
+	for _, ing := range ingredients {
+		result = append(result, reverse[ing])
 	}
-	var keys []string = make([]string, 0)
-	var values []string = make([]string, 0)
-
-	for k, _ := range reverseAssigns {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-	for _, k := range keys {
-		values = append(values, reverseAssigns[k])
-	}
-	return strings.Join(values, ","), nil
+	return strings.Join(result, ","), nil
 }
 
 func Run() {
