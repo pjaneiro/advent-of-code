@@ -20,6 +20,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2021/syntaxscoring"
 	"github.com/pjaneiro/advent-of-code-2021/thetreacheryofwhales"
 	"github.com/pjaneiro/advent-of-code-2021/transparentorigami"
+	"github.com/pjaneiro/advent-of-code-2021/trenchmap"
 	"github.com/pjaneiro/advent-of-code-2021/trickshot"
 	"time"
 )
@@ -102,6 +103,10 @@ func main() {
 
 	timer = time.Now()
 	beaconscanner.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	trenchmap.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
