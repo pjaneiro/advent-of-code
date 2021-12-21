@@ -185,9 +185,14 @@ func Challenge1(data []Scanner) (int, error) {
 	data[0].Pos = [3]int{0, 0, 0}
 	data[0].Rot = [3][3]int{[3]int{1, 0, 0}, [3]int{0, 1, 0}, [3]int{0, 0, 1}}
 	data[0].Located = true
-	positionedBeacons := 1
+	positionedScanners := 0
+	for i := 0; i < len(data); i++ {
+		if data[i].Located {
+			positionedScanners++
+		}
+	}
 outerloop:
-	for positionedBeacons < len(data) {
+	for positionedScanners < len(data) {
 		for leftIdx := 0; leftIdx < len(data); leftIdx++ {
 			if data[leftIdx].Located {
 				continue
@@ -230,7 +235,7 @@ outerloop:
 						data[leftIdx].Rot = multiplyMatrixMatrix(data[rightIdx].Rot, rot)
 						data[leftIdx].Pos = addition(multiplyMatrixVector(data[rightIdx].Rot, difference(sel1[0], tmp1)), data[rightIdx].Pos)
 						data[leftIdx].Located = true
-						positionedBeacons++
+						positionedScanners++
 						continue outerloop
 					}
 				}
@@ -260,9 +265,14 @@ func Challenge2(data []Scanner) (int, error) {
 	data[0].Pos = [3]int{0, 0, 0}
 	data[0].Rot = [3][3]int{[3]int{1, 0, 0}, [3]int{0, 1, 0}, [3]int{0, 0, 1}}
 	data[0].Located = true
-	positionedBeacons := 1
+	positionedScanners := 0
+	for i := 0; i < len(data); i++ {
+		if data[i].Located {
+			positionedScanners++
+		}
+	}
 outerloop:
-	for positionedBeacons < len(data) {
+	for positionedScanners < len(data) {
 		for leftIdx := 0; leftIdx < len(data); leftIdx++ {
 			if data[leftIdx].Located {
 				continue
@@ -305,7 +315,7 @@ outerloop:
 						data[leftIdx].Rot = multiplyMatrixMatrix(data[rightIdx].Rot, rot)
 						data[leftIdx].Pos = addition(multiplyMatrixVector(data[rightIdx].Rot, difference(sel1[0], tmp1)), data[rightIdx].Pos)
 						data[leftIdx].Located = true
-						positionedBeacons++
+						positionedScanners++
 						continue outerloop
 					}
 				}
@@ -339,10 +349,6 @@ func Run() {
 		fmt.Printf("Challenge 1: %d\n", result)
 	}
 
-	data, err = readLines(path)
-	if err != nil {
-		fmt.Printf("Failed with error '%v'\n", err)
-	}
 	result, err = Challenge2(data)
 	if err != nil {
 		fmt.Printf("Error running challenge 2: %v\n", err)
