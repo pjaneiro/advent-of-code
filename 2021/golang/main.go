@@ -14,6 +14,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2021/lanternfish"
 	"github.com/pjaneiro/advent-of-code-2021/packetdecoder"
 	"github.com/pjaneiro/advent-of-code-2021/passagepathing"
+	"github.com/pjaneiro/advent-of-code-2021/reactorreboot"
 	"github.com/pjaneiro/advent-of-code-2021/sevensegmentsearch"
 	"github.com/pjaneiro/advent-of-code-2021/smokebasin"
 	"github.com/pjaneiro/advent-of-code-2021/snailfish"
@@ -112,6 +113,10 @@ func main() {
 
 	timer = time.Now()
 	diracdice.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	reactorreboot.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
