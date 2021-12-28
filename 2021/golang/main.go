@@ -17,6 +17,7 @@ import (
 	"github.com/pjaneiro/advent-of-code-2021/packetdecoder"
 	"github.com/pjaneiro/advent-of-code-2021/passagepathing"
 	"github.com/pjaneiro/advent-of-code-2021/reactorreboot"
+	"github.com/pjaneiro/advent-of-code-2021/seacucumber"
 	"github.com/pjaneiro/advent-of-code-2021/sevensegmentsearch"
 	"github.com/pjaneiro/advent-of-code-2021/smokebasin"
 	"github.com/pjaneiro/advent-of-code-2021/snailfish"
@@ -127,6 +128,10 @@ func main() {
 
 	timer = time.Now()
 	arithmeticlogicunit.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	seacucumber.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
