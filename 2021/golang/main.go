@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/pjaneiro/advent-of-code-2021/amphipod"
 	"github.com/pjaneiro/advent-of-code-2021/beaconscanner"
 	"github.com/pjaneiro/advent-of-code-2021/binarydiagnostic"
 	"github.com/pjaneiro/advent-of-code-2021/chiton"
@@ -117,6 +118,10 @@ func main() {
 
 	timer = time.Now()
 	reactorreboot.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	amphipod.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
