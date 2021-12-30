@@ -272,7 +272,7 @@ func Challenge2(data map[int64]int64) (int64, error) {
 }
 
 func Run() {
-	fmt.Println("Day 11 - Care Package")
+	fmt.Println("Day 13 - Care Package")
 	path := "carepackage/input.txt"
 	data, err := readLines(path)
 	if err != nil {
