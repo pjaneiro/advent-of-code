@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+const OUTPUT = false
+
 func readLines(path string) ([]int, error) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -83,7 +85,9 @@ func intcode(data []int, input []int) (int, error) {
 			} else {
 				out = data[ip+1]
 			}
-			fmt.Println(out)
+			if OUTPUT {
+				fmt.Println(out)
+			}
 			ip += 2
 		case 5:
 			val1, val2 := 0, 0
