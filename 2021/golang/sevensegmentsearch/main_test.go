@@ -1,7 +1,7 @@
 package sevensegmentsearch_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/sevensegmentsearch"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/sevensegmentsearch"
 	"testing"
 )
 

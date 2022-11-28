@@ -1,7 +1,7 @@
 package packetdecoder_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/packetdecoder"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/packetdecoder"
 	"testing"
 )
 

@@ -1,7 +1,7 @@
 package dumbooctopus_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/dumbooctopus"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/dumbooctopus"
 	"testing"
 )
 

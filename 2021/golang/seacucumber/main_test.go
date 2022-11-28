@@ -1,7 +1,7 @@
 package seacucumber_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/seacucumber"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/seacucumber"
 	"testing"
 )
 

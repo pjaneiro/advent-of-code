@@ -1,7 +1,7 @@
 package chiton_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/chiton"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/chiton"
 	"testing"
 )
 

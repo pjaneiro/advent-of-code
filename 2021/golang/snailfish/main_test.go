@@ -1,7 +1,7 @@
 package snailfish_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/snailfish"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/snailfish"
 	"testing"
 )
 

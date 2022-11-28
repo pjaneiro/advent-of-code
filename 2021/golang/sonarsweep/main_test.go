@@ -1,7 +1,7 @@
 package sonarsweep_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/sonarsweep"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/sonarsweep"
 	"testing"
 )
 

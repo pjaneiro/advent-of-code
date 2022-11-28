@@ -1,7 +1,7 @@
 package smokebasin_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/smokebasin"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/smokebasin"
 	"testing"
 )
 

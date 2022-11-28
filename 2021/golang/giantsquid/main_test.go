@@ -1,7 +1,7 @@
 package giantsquid_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/giantsquid"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/giantsquid"
 	"testing"
 )
 

@@ -1,7 +1,7 @@
 package trickshot_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/trickshot"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/trickshot"
 	"testing"
 )
 

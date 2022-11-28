@@ -1,7 +1,7 @@
 package amphipod_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/amphipod"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/amphipod"
 	"testing"
 )
 

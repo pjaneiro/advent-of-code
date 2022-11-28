@@ -1,7 +1,7 @@
 package dive_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/dive"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/dive"
 	"testing"
 )
 

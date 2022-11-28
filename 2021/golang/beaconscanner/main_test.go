@@ -1,7 +1,7 @@
 package beaconscanner_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/beaconscanner"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/beaconscanner"
 	"testing"
 )
 

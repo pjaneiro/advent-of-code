@@ -1,7 +1,7 @@
 package binarydiagnostic_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/binarydiagnostic"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/binarydiagnostic"
 	"testing"
 )
 

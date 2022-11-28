@@ -1,7 +1,7 @@
 package trenchmap_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2021/trenchmap"
+	. "github.com/pjaneiro/advent-of-code/2021/golang/trenchmap"
 	"testing"
 )
 
