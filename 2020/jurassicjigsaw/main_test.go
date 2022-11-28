@@ -1,7 +1,7 @@
 package jurassicjigsaw_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/jurassicjigsaw"
+	. "github.com/pjaneiro/advent-of-code/2020/jurassicjigsaw"
 	"testing"
 )
 

@@ -2,7 +2,7 @@ package toboggantrajectory_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code-2020/toboggantrajectory"
+	. "github.com/pjaneiro/advent-of-code/2020/toboggantrajectory"
 	"testing"
 )
 

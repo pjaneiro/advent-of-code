@@ -1,7 +1,7 @@
 package lobbylayout_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/lobbylayout"
+	. "github.com/pjaneiro/advent-of-code/2020/lobbylayout"
 	"testing"
 )
 

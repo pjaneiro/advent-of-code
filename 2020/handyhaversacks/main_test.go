@@ -1,7 +1,7 @@
 package handyhaversacks_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/handyhaversacks"
+	. "github.com/pjaneiro/advent-of-code/2020/handyhaversacks"
 	"testing"
 )
 

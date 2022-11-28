@@ -1,7 +1,7 @@
 package crabcombat_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/crabcombat"
+	. "github.com/pjaneiro/advent-of-code/2020/crabcombat"
 	"testing"
 )
 

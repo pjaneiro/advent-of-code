@@ -2,7 +2,7 @@ package passwordphilosophy_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code-2020/passwordphilosophy"
+	. "github.com/pjaneiro/advent-of-code/2020/passwordphilosophy"
 	"testing"
 )
 

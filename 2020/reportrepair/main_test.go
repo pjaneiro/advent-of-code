@@ -2,7 +2,7 @@ package reportrepair_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code-2020/reportrepair"
+	. "github.com/pjaneiro/advent-of-code/2020/reportrepair"
 	"testing"
 )
 

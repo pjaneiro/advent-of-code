@@ -1,7 +1,7 @@
 package adapterarray_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/adapterarray"
+	. "github.com/pjaneiro/advent-of-code/2020/adapterarray"
 	"testing"
 )
 

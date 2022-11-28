@@ -1,7 +1,7 @@
 package tickettranslation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/tickettranslation"
+	. "github.com/pjaneiro/advent-of-code/2020/tickettranslation"
 	"testing"
 )
 

@@ -1,7 +1,7 @@
 package conwaycubes_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/conwaycubes"
+	. "github.com/pjaneiro/advent-of-code/2020/conwaycubes"
 	"testing"
 )
 

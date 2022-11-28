@@ -1,7 +1,7 @@
 package shuttlesearch_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/shuttlesearch"
+	. "github.com/pjaneiro/advent-of-code/2020/shuttlesearch"
 	"testing"
 )
 

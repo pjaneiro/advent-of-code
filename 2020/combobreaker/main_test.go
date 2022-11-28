@@ -1,7 +1,7 @@
 package combobreaker_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/combobreaker"
+	. "github.com/pjaneiro/advent-of-code/2020/combobreaker"
 	"testing"
 )
 

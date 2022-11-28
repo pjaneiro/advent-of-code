@@ -1,7 +1,7 @@
 package monstermessages_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/monstermessages"
+	. "github.com/pjaneiro/advent-of-code/2020/monstermessages"
 	"testing"
 )
 

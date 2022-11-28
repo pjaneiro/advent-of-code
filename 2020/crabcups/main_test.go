@@ -1,7 +1,7 @@
 package crabcups_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/crabcups"
+	. "github.com/pjaneiro/advent-of-code/2020/crabcups"
 	"testing"
 )
 

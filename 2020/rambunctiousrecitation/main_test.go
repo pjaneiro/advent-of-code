@@ -1,7 +1,7 @@
 package rambunctiousrecitation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/rambunctiousrecitation"
+	. "github.com/pjaneiro/advent-of-code/2020/rambunctiousrecitation"
 	"testing"
 )
 

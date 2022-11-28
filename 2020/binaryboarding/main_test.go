@@ -1,7 +1,7 @@
 package binaryboarding_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/binaryboarding"
+	. "github.com/pjaneiro/advent-of-code/2020/binaryboarding"
 	"testing"
 )
 

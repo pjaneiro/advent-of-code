@@ -1,7 +1,7 @@
 package encodingerror_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/encodingerror"
+	. "github.com/pjaneiro/advent-of-code/2020/encodingerror"
 	"testing"
 )
 

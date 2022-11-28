@@ -1,7 +1,7 @@
 package handheldhalting_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/handheldhalting"
+	. "github.com/pjaneiro/advent-of-code/2020/handheldhalting"
 	"testing"
 )
 

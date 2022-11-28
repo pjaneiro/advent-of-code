@@ -1,7 +1,7 @@
 package customcustoms_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2020/customcustoms"
+	. "github.com/pjaneiro/advent-of-code/2020/customcustoms"
 	"testing"
 )
 
