@@ -1,7 +1,7 @@
 package universalorbitmap_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/universalorbitmap"
+	. "github.com/pjaneiro/advent-of-code/2019/universalorbitmap"
 	"testing"
 )
 

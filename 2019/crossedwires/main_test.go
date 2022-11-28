@@ -1,7 +1,7 @@
 package crossedwires_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/crossedwires"
+	. "github.com/pjaneiro/advent-of-code/2019/crossedwires"
 	"testing"
 )
 

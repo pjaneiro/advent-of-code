@@ -1,7 +1,7 @@
 package spacestoichiometry_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/spacestoichiometry"
+	. "github.com/pjaneiro/advent-of-code/2019/spacestoichiometry"
 	"testing"
 )
 

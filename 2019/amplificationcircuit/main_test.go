@@ -1,7 +1,7 @@
 package amplificationcircuit_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/amplificationcircuit"
+	. "github.com/pjaneiro/advent-of-code/2019/amplificationcircuit"
 	"testing"
 )
 

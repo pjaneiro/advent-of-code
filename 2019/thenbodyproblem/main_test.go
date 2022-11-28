@@ -1,7 +1,7 @@
 package thenbodyproblem_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/thenbodyproblem"
+	. "github.com/pjaneiro/advent-of-code/2019/thenbodyproblem"
 	"testing"
 )
 

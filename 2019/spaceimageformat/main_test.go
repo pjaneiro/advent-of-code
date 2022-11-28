@@ -1,7 +1,7 @@
 package spaceimageformat_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code-2019/spaceimageformat"
+	. "github.com/pjaneiro/advent-of-code/2019/spaceimageformat"
 	"testing"
 )
 
