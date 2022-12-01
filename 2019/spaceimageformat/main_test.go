@@ -1,8 +1,9 @@
 package spaceimageformat_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/spaceimageformat"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/spaceimageformat"
 )
 
 func TestChallenge1(t *testing.T) {

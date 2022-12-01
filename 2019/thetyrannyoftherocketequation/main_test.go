@@ -1,8 +1,9 @@
 package thetyrannyoftherocketequation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/thetyrannyoftherocketequation"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/thetyrannyoftherocketequation"
 )
 
 func TestChallenge1(t *testing.T) {

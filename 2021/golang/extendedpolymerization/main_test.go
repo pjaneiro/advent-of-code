@@ -1,8 +1,9 @@
 package extendedpolymerization_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/extendedpolymerization"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/extendedpolymerization"
 )
 
 func TestChallenge1(t *testing.T) {

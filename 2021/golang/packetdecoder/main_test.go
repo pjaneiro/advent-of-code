@@ -1,8 +1,9 @@
 package packetdecoder_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/packetdecoder"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/packetdecoder"
 )
 
 func TestChallenge1(t *testing.T) {

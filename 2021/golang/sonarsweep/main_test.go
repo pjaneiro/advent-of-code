@@ -1,8 +1,9 @@
 package sonarsweep_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/sonarsweep"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/sonarsweep"
 )
 
 func TestChallenge1(t *testing.T) {

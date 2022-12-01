@@ -1,8 +1,9 @@
 package universalorbitmap_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/universalorbitmap"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/universalorbitmap"
 )
 
 func TestChallenge1(t *testing.T) {

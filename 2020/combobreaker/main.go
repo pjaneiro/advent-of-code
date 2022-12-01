@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func getLoopSize(key int) (int) {
+func getLoopSize(key int) int {
 	value, result := 1, 0
 	for value != key {
 		result++

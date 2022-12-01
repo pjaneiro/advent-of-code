@@ -1,8 +1,9 @@
 package handheldhalting_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/handheldhalting"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/handheldhalting"
 )
 
 func TestChallenge1(t *testing.T) {

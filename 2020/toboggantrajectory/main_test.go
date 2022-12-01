@@ -2,8 +2,9 @@ package toboggantrajectory_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code/2020/toboggantrajectory"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/toboggantrajectory"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -159,7 +159,7 @@ func HullPaintingRobot(data map[int64]int64, input []int64) (int64, error) {
 	minX, maxX, minY, maxY := math.MaxInt32, math.MinInt32, math.MaxInt32, math.MinInt32
 
 	for true {
-		newColor, done , _ := intCode(data, input, &ip, &ii, &out, &rb)
+		newColor, done, _ := intCode(data, input, &ip, &ii, &out, &rb)
 		if done {
 			break
 		}

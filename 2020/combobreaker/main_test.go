@@ -1,8 +1,9 @@
 package combobreaker_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/combobreaker"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/combobreaker"
 )
 
 func TestChallenge1(t *testing.T) {

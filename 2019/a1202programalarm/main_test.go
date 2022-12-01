@@ -1,8 +1,9 @@
 package a1202programalarm_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/a1202programalarm"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/a1202programalarm"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -4,11 +4,12 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	gc "github.com/gbin/goncurses"
 	"math"
 	"os"
 	"strconv"
 	"strings"
+
+	gc "github.com/gbin/goncurses"
 )
 
 type Point struct {

@@ -2,8 +2,9 @@ package passwordphilosophy_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code/2020/passwordphilosophy"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/passwordphilosophy"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -1,8 +1,9 @@
 package dive_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/dive"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/dive"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -1,8 +1,9 @@
 package lobbylayout_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/lobbylayout"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/lobbylayout"
 )
 
 func TestChallenge1(t *testing.T) {

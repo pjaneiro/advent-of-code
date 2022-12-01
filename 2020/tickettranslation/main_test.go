@@ -1,8 +1,9 @@
 package tickettranslation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/tickettranslation"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/tickettranslation"
 )
 
 func TestChallenge1(t *testing.T) {

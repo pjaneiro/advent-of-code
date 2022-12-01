@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/pjaneiro/advent-of-code/2021/golang/amphipod"
 	"github.com/pjaneiro/advent-of-code/2021/golang/arithmeticlogicunit"
 	"github.com/pjaneiro/advent-of-code/2021/golang/beaconscanner"
@@ -27,7 +29,6 @@ import (
 	"github.com/pjaneiro/advent-of-code/2021/golang/transparentorigami"
 	"github.com/pjaneiro/advent-of-code/2021/golang/trenchmap"
 	"github.com/pjaneiro/advent-of-code/2021/golang/trickshot"
-	"time"
 )
 
 func main() {

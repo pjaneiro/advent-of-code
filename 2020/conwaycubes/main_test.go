@@ -1,8 +1,9 @@
 package conwaycubes_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/conwaycubes"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/conwaycubes"
 )
 
 func TestChallenge1(t *testing.T) {

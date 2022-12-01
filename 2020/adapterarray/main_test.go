@@ -1,8 +1,9 @@
 package adapterarray_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/adapterarray"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/adapterarray"
 )
 
 func TestChallenge1(t *testing.T) {

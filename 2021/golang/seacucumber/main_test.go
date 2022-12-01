@@ -1,8 +1,9 @@
 package seacucumber_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/seacucumber"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/seacucumber"
 )
 
 func TestChallenge1(t *testing.T) {
@@ -13,8 +14,8 @@ func TestChallenge1(t *testing.T) {
 		error    bool
 	}{
 		{
-			name: "Example 1",
-			input: [][]byte{[]byte{'v', '.', '.', '.', '>', '>', '.', 'v', 'v', '>'}, []byte{'.', 'v', 'v', '>', '>', '.', 'v', 'v', '.', '.'}, []byte{'>', '>', '.', '>', 'v', '>', '.', '.', '.', 'v'}, []byte{'>', '>', 'v', '>', '>', '.', '>', '.', 'v', '.'}, []byte{'v', '>', 'v', '.', 'v', 'v', '.', 'v', '.', '.'}, []byte{'>', '.', '>', '>', '.', '.', 'v', '.', '.', '.'}, []byte{'.', 'v', 'v', '.', '.', '>', '.', '>', 'v', '.'}, []byte{'v', '.', 'v', '.', '.', '>', '>', 'v', '.', 'v'}, []byte{'.', '.', '.', '.', 'v', '.', '.', 'v', '.', '>'}},
+			name:     "Example 1",
+			input:    [][]byte{[]byte{'v', '.', '.', '.', '>', '>', '.', 'v', 'v', '>'}, []byte{'.', 'v', 'v', '>', '>', '.', 'v', 'v', '.', '.'}, []byte{'>', '>', '.', '>', 'v', '>', '.', '.', '.', 'v'}, []byte{'>', '>', 'v', '>', '>', '.', '>', '.', 'v', '.'}, []byte{'v', '>', 'v', '.', 'v', 'v', '.', 'v', '.', '.'}, []byte{'>', '.', '>', '>', '.', '.', 'v', '.', '.', '.'}, []byte{'.', 'v', 'v', '.', '.', '>', '.', '>', 'v', '.'}, []byte{'v', '.', 'v', '.', '.', '>', '>', 'v', '.', 'v'}, []byte{'.', '.', '.', '.', 'v', '.', '.', 'v', '.', '>'}},
 			expected: 58,
 			error:    false,
 		},

@@ -1,8 +1,9 @@
 package dumbooctopus_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/dumbooctopus"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/dumbooctopus"
 )
 
 func TestChallenge1(t *testing.T) {

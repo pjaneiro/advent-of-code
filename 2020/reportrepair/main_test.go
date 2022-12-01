@@ -2,8 +2,9 @@ package reportrepair_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code/2020/reportrepair"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/reportrepair"
 )
 
 func TestChallenge1(t *testing.T) {

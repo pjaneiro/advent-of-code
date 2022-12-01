@@ -1,8 +1,9 @@
 package hydrothermalventure_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/hydrothermalventure"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/hydrothermalventure"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -1,8 +1,9 @@
 package monitoringstation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/monitoringstation"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/monitoringstation"
 )
 
 func TestChallenge1(t *testing.T) {

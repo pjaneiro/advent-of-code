@@ -1,8 +1,9 @@
 package crabcups_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/crabcups"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/crabcups"
 )
 
 func TestChallenge1(t *testing.T) {

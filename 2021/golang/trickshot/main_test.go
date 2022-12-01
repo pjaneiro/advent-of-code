@@ -1,8 +1,9 @@
 package trickshot_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/trickshot"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/trickshot"
 )
 
 func TestChallenge1(t *testing.T) {

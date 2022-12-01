@@ -1,8 +1,9 @@
 package sensorboost_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/sensorboost"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/sensorboost"
 )
 
 func TestChallenge1(t *testing.T) {

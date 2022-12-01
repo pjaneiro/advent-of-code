@@ -1,8 +1,9 @@
 package dockingdata_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/dockingdata"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/dockingdata"
 )
 
 func TestChallenge1(t *testing.T) {

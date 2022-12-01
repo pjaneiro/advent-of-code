@@ -1,8 +1,9 @@
 package transparentorigami_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/transparentorigami"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/transparentorigami"
 )
 
 func TestChallenge1(t *testing.T) {

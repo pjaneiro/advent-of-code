@@ -1,8 +1,9 @@
 package crossedwires_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2019/crossedwires"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2019/crossedwires"
 )
 
 func TestChallenge1(t *testing.T) {

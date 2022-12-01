@@ -1,8 +1,9 @@
 package sevensegmentsearch_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/sevensegmentsearch"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/sevensegmentsearch"
 )
 
 func TestChallenge1(t *testing.T) {

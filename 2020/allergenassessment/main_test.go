@@ -1,8 +1,9 @@
 package allergenassessment_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/allergenassessment"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/allergenassessment"
 )
 
 func TestChallenge1(t *testing.T) {

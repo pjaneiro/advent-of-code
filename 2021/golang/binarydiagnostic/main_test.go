@@ -1,8 +1,9 @@
 package binarydiagnostic_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/binarydiagnostic"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/binarydiagnostic"
 )
 
 func TestChallenge1(t *testing.T) {

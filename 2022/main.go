@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/pjaneiro/advent-of-code/2022/caloriecounting"
 	"time"
+
+	"github.com/pjaneiro/advent-of-code/2022/caloriecounting"
 )
 
 func main() {

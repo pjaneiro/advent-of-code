@@ -1,8 +1,9 @@
 package seatingsystem_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/seatingsystem"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/seatingsystem"
 )
 
 func TestChallenge1(t *testing.T) {

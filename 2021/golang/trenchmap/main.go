@@ -33,7 +33,7 @@ func readLines(path string) (string, []string, error) {
 	return algo, data, nil
 }
 
-func parseMap(data []string) (map[Coord]bool) {
+func parseMap(data []string) map[Coord]bool {
 	var result map[Coord]bool = make(map[Coord]bool)
 	for i := 0; i < len(data); i++ {
 		for j := 0; j < len(data[i]); j++ {
@@ -47,7 +47,7 @@ func parseMap(data []string) (map[Coord]bool) {
 	return result
 }
 
-func calculateVal(algo string, key []string) (bool) {
+func calculateVal(algo string, key []string) bool {
 	parsedKey := strings.Join(key, "")
 	var actualKey int
 	if i, err := strconv.ParseInt(parsedKey, 2, 32); err != nil {
@@ -81,15 +81,15 @@ func getBoundaries(data map[Coord]bool) (int, int, int, int) {
 	return minX, maxX, minY, maxY
 }
 
-func solve(algo string, data []string, rounds int) (map[Coord]bool) {
+func solve(algo string, data []string, rounds int) map[Coord]bool {
 	parsedMap := parseMap(data)
 
 	for round := 0; round < rounds; round++ {
 		minX, maxX, minY, maxY := getBoundaries(parsedMap)
 		var newMap map[Coord]bool = make(map[Coord]bool)
 
-		for y := minY - 1; y <= maxY + 1; y++ {
-			for x := minX - 1; x <= maxX + 1; x++ {
+		for y := minY - 1; y <= maxY+1; y++ {
+			for x := minX - 1; x <= maxX+1; x++ {
 				curCoord := Coord{x: x, y: y}
 				var key []string = make([]string, 9)
 				counter := 0
@@ -102,7 +102,7 @@ func solve(algo string, data []string, rounds int) (map[Coord]bool) {
 								key[counter] = "0"
 							}
 						} else {
-							if round % 2 == 1 {
+							if round%2 == 1 {
 								key[counter] = "1"
 							} else {
 								key[counter] = "0"

@@ -2,8 +2,9 @@ package passportprocessing_test
 
 import (
 	"fmt"
-	. "github.com/pjaneiro/advent-of-code/2020/passportprocessing"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/passportprocessing"
 )
 
 func TestChallenge1(t *testing.T) {

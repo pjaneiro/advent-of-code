@@ -1,8 +1,9 @@
 package passagepathing_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/passagepathing"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/passagepathing"
 )
 
 func TestChallenge1(t *testing.T) {

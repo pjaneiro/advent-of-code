@@ -1,8 +1,9 @@
 package trenchmap_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/trenchmap"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/trenchmap"
 )
 
 func TestChallenge1(t *testing.T) {

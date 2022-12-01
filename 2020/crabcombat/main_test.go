@@ -1,8 +1,9 @@
 package crabcombat_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/crabcombat"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/crabcombat"
 )
 
 func TestChallenge1(t *testing.T) {

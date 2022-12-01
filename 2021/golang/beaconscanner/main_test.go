@@ -1,8 +1,9 @@
 package beaconscanner_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/beaconscanner"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/beaconscanner"
 )
 
 func TestChallenge1(t *testing.T) {

@@ -1,8 +1,9 @@
 package monstermessages_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/monstermessages"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/monstermessages"
 )
 
 func TestChallenge1(t *testing.T) {

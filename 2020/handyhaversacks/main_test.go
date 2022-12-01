@@ -1,8 +1,9 @@
 package handyhaversacks_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/handyhaversacks"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/handyhaversacks"
 )
 
 func TestChallenge1(t *testing.T) {

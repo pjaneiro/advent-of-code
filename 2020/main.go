@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/pjaneiro/advent-of-code/2020/adapterarray"
 	"github.com/pjaneiro/advent-of-code/2020/allergenassessment"
 	"github.com/pjaneiro/advent-of-code/2020/binaryboarding"
@@ -27,7 +29,6 @@ import (
 	"github.com/pjaneiro/advent-of-code/2020/shuttlesearch"
 	"github.com/pjaneiro/advent-of-code/2020/tickettranslation"
 	"github.com/pjaneiro/advent-of-code/2020/toboggantrajectory"
-	"time"
 )
 
 func main() {

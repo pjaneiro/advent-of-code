@@ -1,8 +1,9 @@
 package shuttlesearch_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/shuttlesearch"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/shuttlesearch"
 )
 
 func TestChallenge1(t *testing.T) {

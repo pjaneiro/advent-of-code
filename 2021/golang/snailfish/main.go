@@ -10,7 +10,7 @@ import (
 )
 
 type Node struct {
-	Left *Node
+	Left  *Node
 	Right *Node
 	Value int
 }
@@ -31,7 +31,7 @@ func readLines(path string) ([]string, error) {
 	return result, nil
 }
 
-func parseLine(data string) (*Node) {
+func parseLine(data string) *Node {
 	rLiteral, err := regexp.Compile(`^\d+$`)
 	if err != nil {
 		return nil
@@ -46,20 +46,20 @@ func parseLine(data string) (*Node) {
 	}
 
 	open, close := 0, 0
-	for i := 1; i < len(data) - 1; i++ {
+	for i := 1; i < len(data)-1; i++ {
 		if data[i] == '[' {
 			open++
 		} else if data[i] == ']' {
 			close++
 		} else if data[i] == ',' && open == close {
-			return &Node{Left: parseLine(data[1:i]), Right: parseLine(data[i+1:len(data) - 1])}
+			return &Node{Left: parseLine(data[1:i]), Right: parseLine(data[i+1 : len(data)-1])}
 		}
 	}
 
 	return nil
 }
 
-func addLeftMost(node *Node, val int) (bool){
+func addLeftMost(node *Node, val int) bool {
 	if node.Left == nil && node.Right == nil {
 		node.Value = node.Value + val
 		return true
@@ -70,7 +70,7 @@ func addLeftMost(node *Node, val int) (bool){
 	return addLeftMost(node.Right, val)
 }
 
-func addRightMost(node *Node, val int) (bool){
+func addRightMost(node *Node, val int) bool {
 	if node.Left == nil && node.Right == nil {
 		node.Value = node.Value + val
 		return true
@@ -90,7 +90,7 @@ func checkExplodes(node *Node, level int) (bool, int, int) {
 		return true, l, r
 	}
 	if node.Left != nil && node.Right != nil {
-		expL, lL, rL := checkExplodes(node.Left, level + 1)
+		expL, lL, rL := checkExplodes(node.Left, level+1)
 		if expL {
 			if rL != -1 {
 				if addLeftMost(node.Right, rL) {
@@ -99,7 +99,7 @@ func checkExplodes(node *Node, level int) (bool, int, int) {
 			}
 			return true, lL, rL
 		}
-		expR, lR, rR := checkExplodes(node.Right, level + 1)
+		expR, lR, rR := checkExplodes(node.Right, level+1)
 		if expR {
 			if lR != -1 {
 				if addRightMost(node.Left, lR) {
@@ -112,7 +112,7 @@ func checkExplodes(node *Node, level int) (bool, int, int) {
 	return false, -1, -1
 }
 
-func checkSplits(node *Node) (bool) {
+func checkSplits(node *Node) bool {
 	if node.Left == nil && node.Right == nil {
 		if node.Value >= 10 {
 			leftVal := int(math.Floor(float64(node.Value) / 2.0))
@@ -131,14 +131,14 @@ func checkSplits(node *Node) (bool) {
 	return false
 }
 
-func cloneTree(node *Node) (*Node) {
+func cloneTree(node *Node) *Node {
 	if node.Left == nil && node.Right == nil {
 		return &Node{Value: node.Value}
 	}
 	return &Node{Left: cloneTree(node.Left), Right: cloneTree(node.Right)}
 }
 
-func reduceTree(node *Node) (*Node) {
+func reduceTree(node *Node) *Node {
 	result := cloneTree(node)
 	for true {
 		if ok, _, _ := checkExplodes(result, 0); ok {
@@ -152,7 +152,7 @@ func reduceTree(node *Node) (*Node) {
 	return result
 }
 
-func addTrees(left *Node, right *Node) (*Node) {
+func addTrees(left *Node, right *Node) *Node {
 	return &Node{Left: left, Right: right}
 }
 
@@ -168,14 +168,14 @@ func printTree(node *Node, level int) {
 	}
 }
 
-func treeSum(node *Node) (int) {
+func treeSum(node *Node) int {
 	if node.Left == nil && node.Right == nil {
 		return node.Value
 	}
 	return treeSum(node.Left) + treeSum(node.Right)
 }
 
-func treeMagnitude(node *Node) (int) {
+func treeMagnitude(node *Node) int {
 	if node.Left == nil && node.Right == nil {
 		return node.Value
 	}

@@ -1,8 +1,9 @@
 package operationorder_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/operationorder"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/operationorder"
 )
 
 func TestChallenge1(t *testing.T) {

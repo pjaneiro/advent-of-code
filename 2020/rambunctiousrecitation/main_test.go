@@ -1,8 +1,9 @@
 package rambunctiousrecitation_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2020/rambunctiousrecitation"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2020/rambunctiousrecitation"
 )
 
 func TestChallenge1(t *testing.T) {

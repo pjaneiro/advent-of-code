@@ -1,8 +1,9 @@
 package reactorreboot_test
 
 import (
-	. "github.com/pjaneiro/advent-of-code/2021/golang/reactorreboot"
 	"testing"
+
+	. "github.com/pjaneiro/advent-of-code/2021/golang/reactorreboot"
 )
 
 func TestChallenge1(t *testing.T) {
