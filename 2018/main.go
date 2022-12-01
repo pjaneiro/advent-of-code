@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/pjaneiro/advent-of-code/2018/alchemicalreduction"
 	"github.com/pjaneiro/advent-of-code/2018/chronalcalibration"
 	"github.com/pjaneiro/advent-of-code/2018/inventorymanagementsystem"
 	"github.com/pjaneiro/advent-of-code/2018/nomatterhowyousliceit"
@@ -27,6 +28,10 @@ func main() {
 
 	timer = time.Now()
 	reposerecord.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	alchemicalreduction.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
