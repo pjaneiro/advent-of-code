@@ -6,40 +6,33 @@ import (
 	"os"
 )
 
-type Play struct {
-	Them byte
-	You  byte
-}
-
-func readLines(path string) ([]Play, error) {
+func readLines(path string) ([]string, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
 	}
 	defer file.Close()
 
-	var plays []Play
+	var result []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		line := scanner.Text()
-		data := Play{Them: line[0], You: line[2]}
-		plays = append(plays, data)
+		result = append(result, scanner.Text())
 	}
 
-	return plays, nil
+	return result, nil
 }
 
-func Challenge1(data []Play) (int, error) {
-	scores := map[Play]int{
-		Play{Them: 'A', You: 'X'}: 3 + 1,
-		Play{Them: 'A', You: 'Y'}: 6 + 2,
-		Play{Them: 'A', You: 'Z'}: 0 + 3,
-		Play{Them: 'B', You: 'X'}: 0 + 1,
-		Play{Them: 'B', You: 'Y'}: 3 + 2,
-		Play{Them: 'B', You: 'Z'}: 6 + 3,
-		Play{Them: 'C', You: 'X'}: 6 + 1,
-		Play{Them: 'C', You: 'Y'}: 0 + 2,
-		Play{Them: 'C', You: 'Z'}: 3 + 3,
+func Challenge1(data []string) (int, error) {
+	scores := map[string]int{
+		"A X": 3 + 1,
+		"A Y": 6 + 2,
+		"A Z": 0 + 3,
+		"B X": 0 + 1,
+		"B Y": 3 + 2,
+		"B Z": 6 + 3,
+		"C X": 6 + 1,
+		"C Y": 0 + 2,
+		"C Z": 3 + 3,
 	}
 	result := 0
 	for _, play := range data {
@@ -48,17 +41,17 @@ func Challenge1(data []Play) (int, error) {
 	return result, nil
 }
 
-func Challenge2(data []Play) (int, error) {
-	scores := map[Play]int{
-		Play{Them: 'A', You: 'X'}: 0 + 3,
-		Play{Them: 'A', You: 'Y'}: 3 + 1,
-		Play{Them: 'A', You: 'Z'}: 6 + 2,
-		Play{Them: 'B', You: 'X'}: 0 + 1,
-		Play{Them: 'B', You: 'Y'}: 3 + 2,
-		Play{Them: 'B', You: 'Z'}: 6 + 3,
-		Play{Them: 'C', You: 'X'}: 0 + 2,
-		Play{Them: 'C', You: 'Y'}: 3 + 3,
-		Play{Them: 'C', You: 'Z'}: 6 + 1,
+func Challenge2(data []string) (int, error) {
+	scores := map[string]int{
+		"A X": 0 + 3,
+		"A Y": 3 + 1,
+		"A Z": 6 + 2,
+		"B X": 0 + 1,
+		"B Y": 3 + 2,
+		"B Z": 6 + 3,
+		"C X": 0 + 2,
+		"C Y": 3 + 3,
+		"C Z": 6 + 1,
 	}
 	result := 0
 	for _, play := range data {

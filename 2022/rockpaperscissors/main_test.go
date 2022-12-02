@@ -9,13 +9,13 @@ import (
 func TestChallenge1(t *testing.T) {
 	var testCases = []struct {
 		name     string
-		input    []Play
+		input    []string
 		expected int
 		error    bool
 	}{
 		{
 			name:     "Example 1",
-			input:    []Play{Play{Them: 'A', You: 'Y'}, Play{Them: 'B', You: 'X'}, Play{Them: 'C', You: 'Z'}},
+			input:    []string{"A Y", "B X", "C Z"},
 			expected: 15,
 			error:    false,
 		},
@@ -38,13 +38,13 @@ func TestChallenge1(t *testing.T) {
 func TestChallenge2(t *testing.T) {
 	var testCases = []struct {
 		name     string
-		input    []Play
+		input    []string
 		expected int
 		error    bool
 	}{
 		{
 			name:     "Example 1",
-			input:    []Play{Play{Them: 'A', You: 'Y'}, Play{Them: 'B', You: 'X'}, Play{Them: 'C', You: 'Z'}},
+			input:    []string{"A Y", "B X", "C Z"},
 			expected: 12,
 			error:    false,
 		},
