@@ -9,6 +9,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2022/rockpaperscissors"
 	"github.com/pjaneiro/advent-of-code/2022/rucksackreorganization"
 	"github.com/pjaneiro/advent-of-code/2022/supplystacks"
+	"github.com/pjaneiro/advent-of-code/2022/tuningtrouble"
 )
 
 func main() {
@@ -33,6 +34,10 @@ func main() {
 
 	timer = time.Now()
 	supplystacks.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	tuningtrouble.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
