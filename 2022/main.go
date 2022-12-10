@@ -6,6 +6,7 @@ import (
 
 	"github.com/pjaneiro/advent-of-code/2022/caloriecounting"
 	"github.com/pjaneiro/advent-of-code/2022/campcleanup"
+	"github.com/pjaneiro/advent-of-code/2022/cathoderaytube"
 	"github.com/pjaneiro/advent-of-code/2022/nospaceleftondevice"
 	"github.com/pjaneiro/advent-of-code/2022/rockpaperscissors"
 	"github.com/pjaneiro/advent-of-code/2022/ropebridge"
@@ -53,6 +54,10 @@ func main() {
 
 	timer = time.Now()
 	ropebridge.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	cathoderaytube.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
