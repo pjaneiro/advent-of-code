@@ -120,7 +120,7 @@ func Challenge2(data []Dependency, alphaSize int, nWorkers int, offset int) (int
 }
 
 func Run() {
-	fmt.Println("Day 6 - The Sum of Its Parts")
+	fmt.Println("Day 7 - The Sum of Its Parts")
 	path := "thesumofitsparts/input.txt"
 	data, err := readLines(path)
 	if err != nil {
