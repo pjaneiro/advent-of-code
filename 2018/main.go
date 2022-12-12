@@ -12,6 +12,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2018/memorymaneuver"
 	"github.com/pjaneiro/advent-of-code/2018/nomatterhowyousliceit"
 	"github.com/pjaneiro/advent-of-code/2018/reposerecord"
+	"github.com/pjaneiro/advent-of-code/2018/thestarsalign"
 	"github.com/pjaneiro/advent-of-code/2018/thesumofitsparts"
 )
 
@@ -53,6 +54,10 @@ func main() {
 
 	timer = time.Now()
 	marblemania.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	thestarsalign.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
