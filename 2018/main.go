@@ -8,6 +8,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2018/chronalcalibration"
 	"github.com/pjaneiro/advent-of-code/2018/chronalcoordinates"
 	"github.com/pjaneiro/advent-of-code/2018/inventorymanagementsystem"
+	"github.com/pjaneiro/advent-of-code/2018/marblemania"
 	"github.com/pjaneiro/advent-of-code/2018/memorymaneuver"
 	"github.com/pjaneiro/advent-of-code/2018/nomatterhowyousliceit"
 	"github.com/pjaneiro/advent-of-code/2018/reposerecord"
@@ -48,6 +49,10 @@ func main() {
 
 	timer = time.Now()
 	memorymaneuver.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	marblemania.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
