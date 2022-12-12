@@ -108,7 +108,7 @@ func Run() {
 	var result2 []string
 	result2, err = Challenge2(data)
 	if err != nil {
-		fmt.Printf("Error running challenge 1: %v\n", err)
+		fmt.Printf("Error running challenge 2: %v\n", err)
 	} else {
 		fmt.Println("Challenge 2:")
 		for _, line := range result2 {
