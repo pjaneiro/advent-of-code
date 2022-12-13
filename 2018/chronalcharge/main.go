@@ -49,22 +49,36 @@ func Challenge1(serialNumber int) ([]int, error) {
 
 func Challenge2(serialNumber int) ([]int, error) {
 	data := getMap(serialNumber)
-	resultX, resultY, resultSize, power := 0, 0, 0, 0
-	var powers [][]int = make([][]int, len(data))
+
+	var sums [][]int = make([][]int, len(data))
 	for i := 0; i < len(data); i++ {
-		powers[i] = make([]int, len(data[0]))
+		sums[i] = make([]int, len(data))
 	}
-	for size := 1; size <= len(data); size++ {
-		for y := 0; y < len(data)-size; y++ {
-			for x := 0; x < len(data[y])-size; x++ {
-				powers[y][x] += data[y+size-1][x+size-1]
-				for i := 0; i < size-1; i++ {
-					powers[y][x] += data[y+size-1][x+i]
-					powers[y][x] += data[y+i][x+size-1]
-				}
-				if powers[y][x] > power {
-					resultX, resultY, resultSize = x+1, y+1, size
-					power = powers[y][x]
+
+	sums[len(data)-1][len(data)-1] = data[len(data)-1][len(data)-1]
+
+	for y := len(data) - 2; y >= 0; y-- {
+		sums[y][0] = data[y][0] + sums[y+1][0]
+	}
+	for x := len(data) - 2; x >= 0; x-- {
+		sums[0][x] = data[0][x] + sums[0][x+1]
+	}
+	for y := len(data) - 2; y >= 0; y-- {
+		for x := len(data) - 2; x >= 0; x-- {
+			val := data[y][x] + sums[y+1][x] + sums[y][x+1] - sums[y+1][x+1]
+			sums[y][x] = val
+		}
+	}
+
+	resultX, resultY, resultSize, power := 0, 0, 0, 0
+	for size := 1; size <= 300; size++ {
+		for y := len(data) - size - 2; y >= 0; y-- {
+			for x := len(data) - size - 2; x >= 0; x-- {
+				tot := sums[y][x] - sums[y][x+size] - sums[y+size][x] + sums[y+size][x+size]
+				if tot > power {
+					resultX, resultY = x+1, y+1
+					power = tot
+					resultSize = size
 				}
 			}
 		}
