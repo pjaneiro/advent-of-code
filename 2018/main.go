@@ -13,6 +13,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2018/memorymaneuver"
 	"github.com/pjaneiro/advent-of-code/2018/nomatterhowyousliceit"
 	"github.com/pjaneiro/advent-of-code/2018/reposerecord"
+	"github.com/pjaneiro/advent-of-code/2018/subterraneansustainability"
 	"github.com/pjaneiro/advent-of-code/2018/thestarsalign"
 	"github.com/pjaneiro/advent-of-code/2018/thesumofitsparts"
 )
@@ -63,6 +64,10 @@ func main() {
 
 	timer = time.Now()
 	chronalcharge.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	subterraneansustainability.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
