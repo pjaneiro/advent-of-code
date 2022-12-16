@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/pjaneiro/advent-of-code/2022/beaconexclusionzone"
 	"github.com/pjaneiro/advent-of-code/2022/caloriecounting"
 	"github.com/pjaneiro/advent-of-code/2022/campcleanup"
 	"github.com/pjaneiro/advent-of-code/2022/cathoderaytube"
@@ -78,6 +79,11 @@ func main() {
 
 	timer = time.Now()
 	regolithreservoir.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+
+	timer = time.Now()
+	beaconexclusionzone.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
