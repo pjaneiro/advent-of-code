@@ -12,6 +12,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2022/hillclimbingalgorithm"
 	"github.com/pjaneiro/advent-of-code/2022/monkeyinthemiddle"
 	"github.com/pjaneiro/advent-of-code/2022/nospaceleftondevice"
+	"github.com/pjaneiro/advent-of-code/2022/proboscideavolcanium"
 	"github.com/pjaneiro/advent-of-code/2022/regolithreservoir"
 	"github.com/pjaneiro/advent-of-code/2022/rockpaperscissors"
 	"github.com/pjaneiro/advent-of-code/2022/ropebridge"
@@ -84,6 +85,11 @@ func main() {
 
 	timer = time.Now()
 	beaconexclusionzone.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+
+	timer = time.Now()
+	proboscideavolcanium.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
