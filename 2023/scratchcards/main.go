@@ -5,14 +5,12 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 	"strings"
 )
 
 type Card struct {
-	Id             int
-	WinningNumbers map[int]struct{}
-	NumbersIHave   map[int]struct{}
+	WinningNumbers map[string]struct{}
+	NumbersIHave   map[string]struct{}
 }
 
 func readLines(path string) ([]string, error) {
@@ -34,29 +32,15 @@ func readLines(path string) ([]string, error) {
 func parseCards(data []string) ([]Card, error) {
 	var result []Card = make([]Card, 0)
 	for _, line := range data {
-		var card Card = Card{Id: 0, WinningNumbers: make(map[int]struct{}), NumbersIHave: make(map[int]struct{})}
+		var card Card = Card{WinningNumbers: make(map[string]struct{}), NumbersIHave: make(map[string]struct{})}
 		parts := strings.Split(line, ":")
-		idPart, rest := parts[0], parts[1]
-		id, err := strconv.Atoi(strings.TrimSpace(idPart[4:]))
-		if err != nil {
-			return nil, err
-		}
-		card.Id = id
-		parts = strings.Split(rest, " | ")
+		parts = strings.Split(parts[1], " | ")
 		winningPart, havePart := parts[0], parts[1]
 		for _, candidate := range strings.Fields(winningPart) {
-			tmp, err := strconv.Atoi(candidate)
-			if err != nil {
-				return nil, err
-			}
-			card.WinningNumbers[tmp] = struct{}{}
+			card.WinningNumbers[candidate] = struct{}{}
 		}
 		for _, candidate := range strings.Fields(havePart) {
-			tmp, err := strconv.Atoi(candidate)
-			if err != nil {
-				return nil, err
-			}
-			card.NumbersIHave[tmp] = struct{}{}
+			card.NumbersIHave[candidate] = struct{}{}
 		}
 		result = append(result, card)
 	}
@@ -90,9 +74,9 @@ func Challenge2(data []string) (int, error) {
 		return 0, err
 	}
 	var cardCounts map[int]int = make(map[int]int)
-	for _, card := range cards {
-		if _, ok := cardCounts[card.Id]; !ok {
-			cardCounts[card.Id] = 1
+	for id, card := range cards {
+		if _, ok := cardCounts[id]; !ok {
+			cardCounts[id] = 1
 		}
 		cardPrizedNumbers := 0
 		for cur := range card.WinningNumbers {
@@ -101,10 +85,10 @@ func Challenge2(data []string) (int, error) {
 			}
 		}
 		for i := 0; i < cardPrizedNumbers; i++ {
-			if _, ok := cardCounts[card.Id+1+i]; !ok {
-				cardCounts[card.Id+1+i] = 1 + cardCounts[card.Id]
+			if _, ok := cardCounts[id+1+i]; !ok {
+				cardCounts[id+1+i] = 1 + cardCounts[id]
 			} else {
-				cardCounts[card.Id+1+i] = cardCounts[card.Id+1+i] + cardCounts[card.Id]
+				cardCounts[id+1+i] = cardCounts[id+1+i] + cardCounts[id]
 			}
 		}
 	}
