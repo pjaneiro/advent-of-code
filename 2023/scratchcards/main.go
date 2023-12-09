@@ -3,7 +3,6 @@ package scratchcards
 import (
 	"bufio"
 	"fmt"
-	"math"
 	"os"
 	"strings"
 )
@@ -61,7 +60,7 @@ func Challenge1(data []string) (int, error) {
 			}
 		}
 		if cardPrizedNumbers > 0 {
-			result = result + int(math.Pow(2, float64(cardPrizedNumbers-1)))
+			result = result + (1 << (cardPrizedNumbers - 1))
 		}
 	}
 	return result, nil
