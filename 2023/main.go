@@ -6,13 +6,14 @@ import (
 
 	"github.com/pjaneiro/advent-of-code/2023/cubeconundrum"
 	"github.com/pjaneiro/advent-of-code/2023/gearratios"
+	"github.com/pjaneiro/advent-of-code/2023/ifyougiveaseedafertilizer"
 	"github.com/pjaneiro/advent-of-code/2023/scratchcards"
 	"github.com/pjaneiro/advent-of-code/2023/trebuchet"
 )
 
 func main() {
 	timerAll := time.Now()
-	timer := time.Now()
+	var timer time.Time
 
 	timer = time.Now()
 	trebuchet.Run()
@@ -28,6 +29,10 @@ func main() {
 
 	timer = time.Now()
 	scratchcards.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	ifyougiveaseedafertilizer.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
