@@ -9,6 +9,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2023/gearratios"
 	"github.com/pjaneiro/advent-of-code/2023/hauntedwasteland"
 	"github.com/pjaneiro/advent-of-code/2023/ifyougiveaseedafertilizer"
+	"github.com/pjaneiro/advent-of-code/2023/miragemaintenance"
 	"github.com/pjaneiro/advent-of-code/2023/scratchcards"
 	"github.com/pjaneiro/advent-of-code/2023/trebuchet"
 	"github.com/pjaneiro/advent-of-code/2023/waitforit"
@@ -48,6 +49,10 @@ func main() {
 
 	timer = time.Now()
 	hauntedwasteland.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	miragemaintenance.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
