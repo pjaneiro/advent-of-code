@@ -80,7 +80,6 @@ func Challenge2(data []string) (int, error) {
 			result++
 		}
 		location = (location + (step.Direction * step.Distance) + 100) % 100
-		fmt.Println(location, result)
 	}
 	return result, nil
 }
