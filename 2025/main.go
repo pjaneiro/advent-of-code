@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/pjaneiro/advent-of-code/2025/cafeteria"
 	"github.com/pjaneiro/advent-of-code/2025/giftshop"
 	"github.com/pjaneiro/advent-of-code/2025/lobby"
 	"github.com/pjaneiro/advent-of-code/2025/printingdepartment"
@@ -28,6 +29,10 @@ func main() {
 
 	timer = time.Now()
 	printingdepartment.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	cafeteria.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
