@@ -9,6 +9,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2025/lobby"
 	"github.com/pjaneiro/advent-of-code/2025/printingdepartment"
 	"github.com/pjaneiro/advent-of-code/2025/secretentrance"
+	"github.com/pjaneiro/advent-of-code/2025/trashcompactor"
 )
 
 func main() {
@@ -33,6 +34,10 @@ func main() {
 
 	timer = time.Now()
 	cafeteria.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	trashcompactor.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
