@@ -8,6 +8,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2025/giftshop"
 	"github.com/pjaneiro/advent-of-code/2025/laboratories"
 	"github.com/pjaneiro/advent-of-code/2025/lobby"
+	"github.com/pjaneiro/advent-of-code/2025/playground"
 	"github.com/pjaneiro/advent-of-code/2025/printingdepartment"
 	"github.com/pjaneiro/advent-of-code/2025/secretentrance"
 	"github.com/pjaneiro/advent-of-code/2025/trashcompactor"
@@ -43,6 +44,10 @@ func main() {
 
 	timer = time.Now()
 	laboratories.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	playground.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
