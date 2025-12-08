@@ -6,6 +6,7 @@ import (
 
 	"github.com/pjaneiro/advent-of-code/2024/bridgerepair"
 	"github.com/pjaneiro/advent-of-code/2024/ceressearch"
+	"github.com/pjaneiro/advent-of-code/2024/clawcontraption"
 	"github.com/pjaneiro/advent-of-code/2024/diskfragmenter"
 	"github.com/pjaneiro/advent-of-code/2024/gardengroups"
 	"github.com/pjaneiro/advent-of-code/2024/guardgallivant"
@@ -68,6 +69,10 @@ func main() {
 
 	timer = time.Now()
 	gardengroups.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	clawcontraption.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
