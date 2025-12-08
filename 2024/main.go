@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/pjaneiro/advent-of-code/2024/bridgerepair"
 	"github.com/pjaneiro/advent-of-code/2024/ceressearch"
 	"github.com/pjaneiro/advent-of-code/2024/guardgallivant"
 	"github.com/pjaneiro/advent-of-code/2024/historianhysteria"
@@ -38,6 +39,10 @@ func main() {
 
 	timer = time.Now()
 	guardgallivant.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	bridgerepair.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
