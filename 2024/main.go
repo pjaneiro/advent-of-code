@@ -11,6 +11,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2024/historianhysteria"
 	"github.com/pjaneiro/advent-of-code/2024/hoofit"
 	"github.com/pjaneiro/advent-of-code/2024/mullitover"
+	"github.com/pjaneiro/advent-of-code/2024/plutonianpebbles"
 	"github.com/pjaneiro/advent-of-code/2024/printqueue"
 	"github.com/pjaneiro/advent-of-code/2024/rednosedreports"
 	"github.com/pjaneiro/advent-of-code/2024/resonantcollinearity"
@@ -58,6 +59,10 @@ func main() {
 
 	timer = time.Now()
 	hoofit.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	plutonianpebbles.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
