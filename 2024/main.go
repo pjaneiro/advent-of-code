@@ -17,6 +17,7 @@ import (
 	"github.com/pjaneiro/advent-of-code/2024/printqueue"
 	"github.com/pjaneiro/advent-of-code/2024/rednosedreports"
 	"github.com/pjaneiro/advent-of-code/2024/resonantcollinearity"
+	"github.com/pjaneiro/advent-of-code/2024/restroomredoubt"
 )
 
 func main() {
@@ -73,6 +74,10 @@ func main() {
 
 	timer = time.Now()
 	clawcontraption.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	restroomredoubt.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
