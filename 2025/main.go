@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/pjaneiro/advent-of-code/2025/cafeteria"
+	"github.com/pjaneiro/advent-of-code/2025/factory"
 	"github.com/pjaneiro/advent-of-code/2025/giftshop"
 	"github.com/pjaneiro/advent-of-code/2025/laboratories"
 	"github.com/pjaneiro/advent-of-code/2025/lobby"
@@ -53,6 +54,10 @@ func main() {
 
 	timer = time.Now()
 	movietheater.Run()
+	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
+
+	timer = time.Now()
+	factory.Run()
 	fmt.Printf("Time elapsed: %v\n\n", time.Since(timer))
 
 	fmt.Printf("Total time elapsed: %v\n", time.Since(timerAll))
